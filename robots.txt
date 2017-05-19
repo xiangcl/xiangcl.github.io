@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
+Sitemap: http://xiangcl.com/sitemap.xml
+Sitemap: http://xiangcl.com/baidusitemap.xml
+

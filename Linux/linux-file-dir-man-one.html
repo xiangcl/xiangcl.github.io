@@ -1,0 +1,975 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="GMsZTqIe9hTE0zeMQRvithqQtn6iRgHbqVH21JfYNEs" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Linux,Linux基础," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="向常乐的Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="一、目录与路径相对路径与绝对路径1.绝对路径：路径的写法“一定由跟目录 / 写起”
+例如：/usr/share/doc
+
+2.相对路径：路径的写法“不是由/写起”
+例如：由 /usr/share/doc 要到 /usr/share/man 下面时，可以写成： “cd ../man”这就是相对路径的写法啦！相对路径意指“相对于目前工作目录的路径！”
+
+目录的相关操作特殊目录12345dr-xr-xr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux文件与目录管理1">
+<meta property="og:url" content="http://xiangcl.com/Linux/linux-file-dir-man-one.html">
+<meta property="og:site_name" content="向常乐的Blog">
+<meta property="og:description" content="一、目录与路径相对路径与绝对路径1.绝对路径：路径的写法“一定由跟目录 / 写起”
+例如：/usr/share/doc
+
+2.相对路径：路径的写法“不是由/写起”
+例如：由 /usr/share/doc 要到 /usr/share/man 下面时，可以写成： “cd ../man”这就是相对路径的写法啦！相对路径意指“相对于目前工作目录的路径！”
+
+目录的相关操作特殊目录12345dr-xr-xr">
+<meta property="og:image" content="http://xiangclimg-10066880.cos.myqcloud.com/more_user.gif">
+<meta property="og:updated_time" content="2017-05-18T09:02:42.514Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux文件与目录管理1">
+<meta name="twitter:description" content="一、目录与路径相对路径与绝对路径1.绝对路径：路径的写法“一定由跟目录 / 写起”
+例如：/usr/share/doc
+
+2.相对路径：路径的写法“不是由/写起”
+例如：由 /usr/share/doc 要到 /usr/share/man 下面时，可以写成： “cd ../man”这就是相对路径的写法啦！相对路径意指“相对于目前工作目录的路径！”
+
+目录的相关操作特殊目录12345dr-xr-xr">
+<meta name="twitter:image" content="http://xiangclimg-10066880.cos.myqcloud.com/more_user.gif">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://xiangcl.com/Linux/linux-file-dir-man-one.html"/>
+
+
+  <title> Linux文件与目录管理1 | 向常乐的Blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-86793462-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?2f2c82bc4fe99249065382469fb4a3d1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=59276703";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">向常乐的Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">知足者 常乐也！</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Linux文件与目录管理1
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-18T17:02:42+08:00" content="2017-05-18">
+              2017-05-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、目录与路径"><a href="#一、目录与路径" class="headerlink" title="一、目录与路径"></a>一、目录与路径</h2><h3 id="相对路径与绝对路径"><a href="#相对路径与绝对路径" class="headerlink" title="相对路径与绝对路径"></a>相对路径与绝对路径</h3><h4 id="1-绝对路径：路径的写法“一定由跟目录-写起”"><a href="#1-绝对路径：路径的写法“一定由跟目录-写起”" class="headerlink" title="1.绝对路径：路径的写法“一定由跟目录 / 写起”"></a>1.绝对路径：路径的写法“一定由跟目录 <code>/</code> 写起”</h4><ul>
+<li>例如：<code>/usr/share/doc</code></li>
+</ul>
+<h4 id="2-相对路径：路径的写法“不是由-写起”"><a href="#2-相对路径：路径的写法“不是由-写起”" class="headerlink" title="2.相对路径：路径的写法“不是由/写起”"></a>2.相对路径：路径的写法“不是由<code>/</code>写起”</h4><ul>
+<li>例如：由 <code>/usr/share/doc</code> 要到 <code>/usr/share/man</code> 下面<br>时，可以写成： “<code>cd ../man</code>”这就是相对路径的写法啦！相对路径意指“相对于目前工作目录的路径！”</li>
+</ul>
+<h3 id="目录的相关操作"><a href="#目录的相关操作" class="headerlink" title="目录的相关操作"></a>目录的相关操作</h3><h4 id="特殊目录"><a href="#特殊目录" class="headerlink" title="特殊目录"></a>特殊目录</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">dr-xr-xr-x. 19 root root  4096 11月  5 10:25 .       #代表此层目录</div><div class="line">dr-xr-xr-x. 19 root root  4096 11月  5 10:25 ..      #代表上一层目录</div><div class="line"></div><div class="line">~       #代表“目前使用者身份”所在的主文件夹</div><div class="line">~xiangcl        #代表 xiangcl 这个使用者的主文件夹（ xiangcl是个帐号名称）</div></pre></td></tr></table></figure>
+<h4 id="常见的目录处理指令"><a href="#常见的目录处理指令" class="headerlink" title="常见的目录处理指令"></a>常见的目录处理指令</h4><h5 id="cd-change-directory-变换目录"><a href="#cd-change-directory-变换目录" class="headerlink" title="cd (change directory, 变换目录)"></a>cd (change directory, 变换目录)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cd ~      #回到当前用户的主目录</div><div class="line">$ cd ~USERNAME       #切换到指定用户目录的主目录</div><div class="line">$ cd        #回到当前用户的主目录</div><div class="line">$ cd ..     #切换到当前位置的上一层目录</div><div class="line">$ cd -      #在上一个目录和当前目录之间来回切换</div><div class="line">$ cd /usr/share     #进入/usr/share这个目录，绝对路径的写法</div><div class="line">$ cd ../src     #进入/usr/src这个目录，相对路径的写法</div></pre></td></tr></table></figure>
+<h5 id="pwd-OPTION-（显示目前所在的目录）"><a href="#pwd-OPTION-（显示目前所在的目录）" class="headerlink" title="pwd [OPTION]  （显示目前所在的目录）"></a>pwd [OPTION]  （显示目前所在的目录）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$ pwd       #显示当前所在目录的绝对路径</div><div class="line">$ pwd -P        #显示出真实路径，而非链接(link)路径</div><div class="line">例如：</div><div class="line">[xiangcl@VM_0_26_centos ~]$ cd /var/mail/       #切换到/var/mail这个目录下</div><div class="line">[xiangcl@VM_0_26_centos mail]$ pwd</div><div class="line">/var/mail       #列出当前目录的绝对路径</div><div class="line">[xiangcl@VM_0_26_centos mail]$ pwd -P</div><div class="line">/var/spool/mail     #感觉和没加-P的差别有点大</div><div class="line">[xiangcl@VM_0_26_centos mail]$ cd ..</div><div class="line">[xiangcl@VM_0_26_centos var]$ ls -l mail</div><div class="line">lrwxrwxrwx 1 root root 10 11月  1 09:52 mail -&gt; spool/mail       #原来/var/mail 是链接文件，链接到 /var/spool/mail</div></pre></td></tr></table></figure>
+<p><em>pwd是Print Working Directory的缩写，是显示目前所在目录的指令。</em></p>
+<h5 id="mkdir-options-file…-创建新目录"><a href="#mkdir-options-file…-创建新目录" class="headerlink" title="mkdir [options] file…   (创建新目录)"></a>mkdir [options] file…   (创建新目录)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">-m mode, --mode=mode</div><div class="line">    设置文件的权限喔！直接设置，不需要看默认权限 （ umask）</div><div class="line">-p, --parents</div><div class="line">    帮助你直接将所需要的目录（包含上层目录） 递回创建起来！</div><div class="line">-v</div><div class="line">    显示详细信息</div><div class="line"></div><div class="line">[xiangcl@VM_0_26_centos ~]$ cd /tmp/    #切换到/tpm下去做实验</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ mkdir test    #创建test这个目录，没有返回消息代表创建成功</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ mkdir test1/test2/test3      #创建失败</div><div class="line">mkdir: 无法创建目录&quot;test1/test2/test3&quot;: 没有那个文件或目录</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ mkdir -p test1/test2/test3    #需要加上-p去递归创建</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ tree test1    #显示test1这个目录下的层级结构</div><div class="line">test1</div><div class="line">`-- test2</div><div class="line">    `-- test3</div><div class="line"></div><div class="line">2 directories, 0 files</div><div class="line"></div><div class="line">[xiangcl@VM_0_26_centos tmp]$ mkdir -m 711 test2</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ ls -ld test*</div><div class="line">drwxrwxr-x 2 xiangcl xiangcl 4096 11月  5 11:32 test</div><div class="line">drwxrwxr-x 3 xiangcl xiangcl 4096 11月  5 11:33 test1</div><div class="line">drwx--x--x 2 xiangcl xiangcl 4096 11月  5 11:37 test2</div><div class="line">#没有加-m选项的目录会使用系统默认的属性</div><div class="line">#[umask]设置默认属性</div></pre></td></tr></table></figure>
+<h5 id="rmdir-（删除“空”目录）"><a href="#rmdir-（删除“空”目录）" class="headerlink" title="rmdir  （删除“空”目录）"></a>rmdir  （删除“空”目录）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">rmdir[options]directory...</div><div class="line">OPTION:</div><div class="line">    -v：显示过程</div><div class="line"></div><div class="line">[xiangcl@VM_0_26_centos tmp]$ ls -ld test*      #查看/tmp这个目录下的文件</div><div class="line">drwxrwxr-x 2 xiangcl xiangcl 4096 11月  5 11:32 test</div><div class="line">drwxrwxr-x 3 xiangcl xiangcl 4096 11月  5 11:33 test1</div><div class="line">drwx--x--x 2 xiangcl xiangcl 4096 11月  5 11:37 test2</div><div class="line">drwxr--r-- 2 xiangcl root    4096 11月  1 13:44 testing</div><div class="line"></div><div class="line">[xiangcl@VM_0_26_centos tmp]$ rmdir test        #删除test这个目录，Note：test这个目录为空</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ rmdir test1       #删除test1这个目录失败，因为这个目录不为空</div><div class="line">rmdir: 删除 &quot;test1&quot; 失败: 目录非空</div><div class="line"></div><div class="line">[xiangcl@VM_0_26_centos tmp]$ rmdir -p test1/test2/test3/       #加上那个-p选项</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ ls -ld test*</div><div class="line">drwx--x--x 2 xiangcl xiangcl 4096 11月  5 11:37 test2</div><div class="line">drwxr--r-- 2 xiangcl root    4096 11月  1 13:44 testing</div></pre></td></tr></table></figure>
+<h3 id="文件内容类型查看命令：file"><a href="#文件内容类型查看命令：file" class="headerlink" title="文件内容类型查看命令：file"></a>文件内容类型查看命令：file</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">file /PAHT/TO/SOMEWHERE</div><div class="line"></div><div class="line">范例：查看 /etc/passwd 的文件类型</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ cd /etc/</div><div class="line">[xiangcl@VM_0_26_centos etc]$ file ./passwd</div><div class="line">./passwd: ASCII text</div></pre></td></tr></table></figure>
+<h3 id="回显命令：echo"><a href="#回显命令：echo" class="headerlink" title="回显命令：echo"></a>回显命令：echo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">-n: 禁止自动添加换行符号；</div><div class="line">-e: 允许使用转义符；</div><div class="line">	\n: 换行</div><div class="line">	\t: 制表符</div><div class="line"></div><div class="line">echo &quot;$VAR_NAME&quot;: 变量会替换，双引号表弱引用</div><div class="line">echo &apos;$VAR_NAME&apos;: 变量不会替换，强引用</div></pre></td></tr></table></figure>
+<h3 id="which：显示命令对应的程序文件路径"><a href="#which：显示命令对应的程序文件路径" class="headerlink" title="which：显示命令对应的程序文件路径"></a>which：显示命令对应的程序文件路径</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">which [OPTION] COMMAND</div><div class="line">	--skip-alias：禁止显示别名</div><div class="line"></div><div class="line">范例一：显示 ls 对应的程序文件路径</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ which ls</div><div class="line">alias ls=&apos;ls --color=auto&apos;</div><div class="line">	/usr/bin/ls</div><div class="line"></div><div class="line">范例二：在范例一的基础上不显示别名</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ which --skip-alias ls</div><div class="line">/usr/bin/ls</div></pre></td></tr></table></figure>
+<h3 id="whatis-用于查询一个命令执行什么功能，并将查询结果打印到终端上"><a href="#whatis-用于查询一个命令执行什么功能，并将查询结果打印到终端上" class="headerlink" title="whatis :用于查询一个命令执行什么功能，并将查询结果打印到终端上"></a>whatis :用于查询一个命令执行什么功能，并将查询结果打印到终端上</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">使用mkwhatis命令可将当前系统上所有的帮助手册及与之对应的关键字创建为一个数据库；</div><div class="line"></div><div class="line">whatis命令在用catman命令创建的数据库中查找command参数指定的命令、系统调用、库函数或特殊文件名。whatis命令显示手册部分的页眉行。然后可以发出man命令以获取附加的信息。whatis命令等同于使用man -f命令。（需要root权限）</div><div class="line"></div><div class="line">范例：显示 ls 手册部分的页眉行</div><div class="line">[root@VM_0_26_centos ~]# whatis ls</div><div class="line">ls (1)               - 列目录内容</div></pre></td></tr></table></figure>
+<h2 id="二、文件与目录管理"><a href="#二、文件与目录管理" class="headerlink" title="二、文件与目录管理"></a>二、文件与目录管理</h2><h3 id="ls-options-files…-（列出目录的内容）"><a href="#ls-options-files…-（列出目录的内容）" class="headerlink" title="ls [options] [files…]       （列出目录的内容）"></a>ls [options] [files…]       （列出目录的内容）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">-a，--all</div><div class="line">    全部的文件，连同隐藏文件（ 开头为 . 的文件） 一起列出来（ 常用）</div><div class="line">-A，--almost-all</div><div class="line">    全部的文件，连同隐藏文件，但不包括 . 与 .. 这两个目录</div><div class="line">-d，--directory</div><div class="line">    仅列出目录本身，而不是列出目录内的文件数据</div><div class="line">-f</div><div class="line">    直接列出结果，而不进行排序 （ ls 默认会以文件名排序！）</div><div class="line">-F</div><div class="line">    根据文件、目录等信息，给予附加数据结构</div><div class="line">    例如：*:代表可可执行文件； /:代表目录； =:代表 socket 文件； &amp;#124;:代表 FIFO 文件；</div><div class="line">-h，--human-readable</div><div class="line">    将文件大小以人类较易读的方式（ 例如 GB, KB 等等） 列出来；</div><div class="line">-i</div><div class="line">    列出 inode 号码，inode 的意义下一章将会介绍；</div><div class="line">-l，, --format=long, --format=verbose</div><div class="line">    长数据串行出，除每个文件名外，增加显示文件类型、权限、硬链接数、所有者名、组名、大小（byte）、及时间信息（如未指明是其它时间即指修改时间）。对于6个月以上的文件或超出未来1小时的文件，时间信息中的时分将被年代取代。；（ 常用）</div><div class="line">-n，--numeric-uid-gid</div><div class="line">    列出 UID 与 GID 而非使用者与群组的名称 （ UID与GID会在帐号管理提到！）</div><div class="line">-r，--reverse</div><div class="line">    将排序结果反向输出，例如：原本文件名由小到大，反向则为由大到小；</div><div class="line">-R，--recursive</div><div class="line">    连同子目录内容一起列出来，等于该目录下的所有文件都会显示出来；</div><div class="line">-S，--sort=size</div><div class="line">    以文件大小大小排序，而不是用文件名排序；</div><div class="line">-t，--sort=time</div><div class="line">    依时间排序，而不是用文件名。</div><div class="line">--color=never</div><div class="line">    不要依据文件特性给予颜色显示；</div><div class="line">--color=always</div><div class="line">    显示颜色</div><div class="line">--color=auto</div><div class="line">    让系统自行依据设置来判断是否给予颜色</div><div class="line">--full-time</div><div class="line">    以完整时间模式（包含年、月、日、时、分）输出</div><div class="line">--time=&#123;atime,ctime&#125;</div><div class="line">    输出 access 时间或改变权限属性时间（ctime），而非内容变更时间（modification time）</div></pre></td></tr></table></figure>
+<h3 id="复制-cp-、删除-rm-与移动-mv"><a href="#复制-cp-、删除-rm-与移动-mv" class="headerlink" title="复制(cp)、删除(rm)与移动(mv)"></a>复制(cp)、删除(rm)与移动(mv)</h3><h4 id="cp-复制文件或目录"><a href="#cp-复制文件或目录" class="headerlink" title="cp    (复制文件或目录)"></a>cp    (复制文件或目录)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">cp [OPTION]... [-T] SOURCE DEST</div><div class="line">cp [OPTION]... SOURCE... DIRECTORY</div><div class="line">cp [OPTION]... -t DIRECTORY SOURCE...</div><div class="line"></div><div class="line">cp SRC DEST</div><div class="line">    SRC是文件：</div><div class="line">    	如果目标不存在：新建DEST，并将SRC中内容填充至DEST中；</div><div class="line">    	如果目录存在：</div><div class="line">    		如果DEST是文件：将SRC中的内容覆盖至DEST中；</div><div class="line">    			此时建议为cp命令使用-i选项；</div><div class="line">    		如果DEST是目录：在DEST下新建与原文件同名的文件，并将SRC中内容填充至新文件中；</div><div class="line"></div><div class="line">cp SRC DEST</div><div class="line">	SRC是目录：</div><div class="line">		此时使用选项：-r</div><div class="line"></div><div class="line">		如果DEST不存在：则创建指定目录，复制SRC目录中所有文件至DEST中；</div><div class="line">		如果DEST存在：</div><div class="line">			如果DEST是文件：报错</div><div class="line">			如果DEST是目录：在DEST下新建与源目录同名的目录及文件，将SRC中的文件内容填充至新目录的文件中。</div><div class="line"></div><div class="line">cp SRC... DEST</div><div class="line">	SRC...：多个文件</div><div class="line">		DEST必须存在，且为目录，其它情形均会出错；</div><div class="line"></div><div class="line">Common options:</div><div class="line">-a,--archive</div><div class="line">    归档，相当于 -dr --preserve=all 的意思，至于 dr 请参考下列说明；（ 常用）</div><div class="line">-d, --no-dereference --preserv=links</div><div class="line">    --preserv[=ATTR_LIST]</div><div class="line">    	mode: 权限</div><div class="line">    	ownership: 属主属组</div><div class="line">    	timestamp:</div><div class="line">    	links</div><div class="line">    	xattr</div><div class="line">    	context</div><div class="line">    	all</div><div class="line">    复制符号链接作为符号链接而不是复制它指向的文件,并且保护在副本中原文件之间的硬链接.</div><div class="line">-f,--force</div><div class="line">    为强制（ force） 的意思，若目标文件已经存在且无法打开，则移除后再尝试一次；</div><div class="line">-i,--interactive</div><div class="line">    交互式</div><div class="line">    若目标文件（ destination） 已经存在时，在覆盖时会先询问动作的进行（ 常用）</div><div class="line">-l,--link</div><div class="line">    进行硬式链接（ hard link） 的链接文件创建，而非复制文件本身；</div><div class="line">-p,--preserve</div><div class="line">    连同文件的属性（权限、用户、时间、许可）一起复制过去，而非使用默认属性（ 备份常用） ；</div><div class="line">-r</div><div class="line">    递回持续复制，用于目录的复制行为；（ 常用）</div><div class="line">-R, --recursive</div><div class="line">    递归地复制目录,保留非目录</div><div class="line">-s，--symbolic-link</div><div class="line">    复制成为符号链接文件 （ symbolic link） ，亦即“捷径”文件；</div><div class="line">-u，--update</div><div class="line">    destination 比 source 旧才更新 destination，或 destination 不存在的情况下才复制。</div><div class="line">--preserve=all</div><div class="line">    除了 -p 的权限相关参数外，还加入 SELinux 的属性, links, xattr 等也复制了。</div><div class="line">    最后需要注意的，如果来源文件有两个以上，则最后一个目的文件一定要是“目录”才行！</div></pre></td></tr></table></figure>
+<h4 id="rm-移除文件或目录"><a href="#rm-移除文件或目录" class="headerlink" title="rm  (移除文件或目录)"></a>rm  (移除文件或目录)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">rm [optiongs] files...</div><div class="line">options:</div><div class="line">    -f, --force</div><div class="line">        强制删除，就是 force 的意识，忽略不存在的文件，不会出现警告讯息；</div><div class="line">    -i, --interactive</div><div class="line">        交互式</div><div class="line">        互动模式，在删除前会询问使用者是否删除这一动作；</div><div class="line">    -r, -R，--recursive</div><div class="line">        递归删除，最常用在目录的删除。</div><div class="line">    -v，--verbose</div><div class="line">        在移除每个文件之前打印其名称。</div><div class="line"></div><div class="line">范例一：将创建的文件删除</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ touch test</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ rm -i test</div><div class="line">rm：是否删除普通空文件 &quot;test&quot;？y</div><div class="line"># 加上 -i 选项就会主动询问是否删除，避免文件的误删。</div><div class="line"></div><div class="line">范例二：通过*，删除所有以test开头的文件</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ rm -i test*</div><div class="line"># * 代表删除所有以test开头的文件</div><div class="line"></div><div class="line">范例三：将不为空的目录删除</div><div class="line">[root@VM_0_26_centos tmp]# rmdir ./testing</div><div class="line">rmdir: 删除 &quot;./testing&quot; 失败: 目录非空</div><div class="line">[root@VM_0_26_centos tmp]# rm -r ./testing</div><div class="line">rm：是否进入目录&quot;./testing&quot;? y</div><div class="line">rm：是否删除普通空文件 &quot;./testing/1.sh&quot;？y</div><div class="line">rm：是否删除普通空文件 &quot;./testing/2.sh&quot;？y</div><div class="line">rm：是否删除普通空文件 &quot;./testing/3.sh&quot;？y</div><div class="line">rm：是否删除目录 &quot;./testing&quot;？y</div><div class="line"># 因为是root身份，默认已经加入了 -i 的选项，这是一种保护机制</div><div class="line"></div><div class="line">范例四：删除一个带有 - 开头的文件</div><div class="line">[root@VM_0_26_centos tmp]# touch ./-aaa-</div><div class="line">[root@VM_0_26_centos tmp]# ls -l</div><div class="line"> -rw-r--r-- 1 root root    0 11月  9 14:41 -aaa-</div><div class="line">[root@VM_0_26_centos tmp]# rm -aaa-</div><div class="line">rm：无效选项 -- a</div><div class="line">Try &apos;rm ./-aaa-&apos; to remove the file &quot;-aaa-&quot;.</div><div class="line">Try &apos;rm --help&apos; for more information.</div><div class="line">[root@VM_0_26_centos tmp]# rm ./-aaa-</div><div class="line">rm：是否删除普通空文件 &quot;./-aaa-&quot;？y</div></pre></td></tr></table></figure>
+<h5 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h5><ul>
+<li>为了防止文件被root误杀，很多distributions都默认在 <code>rm</code> 指令中加了 <code>-i</code> 选项；</li>
+<li>递归删除使用 <code>-r</code> 选项，但是<code>-r</code>选项威力太过强大，一般只有确定文件要删除才会使用；</li>
+<li>文件名最好不要使用 <code>-</code> 开头；</li>
+</ul>
+<h4 id="mv-移动文件与目录、或用于文件更名"><a href="#mv-移动文件与目录、或用于文件更名" class="headerlink" title="mv     (移动文件与目录、或用于文件更名)"></a>mv     (移动文件与目录、或用于文件更名)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">mv [option]... source destination</div><div class="line">mv [option]... source... directory</div><div class="line">mv [option]... --target-directory=DIRECTORY SOURCE...</div><div class="line"></div><div class="line">option:</div><div class="line">    -f, --force</div><div class="line">        强制的意思，如果咪表文件已经存在，不会询问而直接覆盖；</div><div class="line">    -i, --interactive</div><div class="line">        覆盖提示</div><div class="line">    -u, --update</div><div class="line">        若目标文件已经存在，且source比目标文件新，才是更新覆盖；</div><div class="line"></div><div class="line">范例一：创建一目录，将文件移动到目录中</div><div class="line">[root@VM_0_26_centos tmp]# cp ~/.bashrc bashrc</div><div class="line">[root@VM_0_26_centos tmp]# mkdir test</div><div class="line">[root@VM_0_26_centos tmp]# mv bashrc test/</div><div class="line"># 将某个文件移动到目录中</div><div class="line"></div><div class="line">范例二：文件更名</div><div class="line">[root@VM_0_26_centos tmp]# mv test test1</div><div class="line"># 将 test 更名为 test1；</div><div class="line"></div><div class="line">范例三：将多个文件移动到目录中</div><div class="line">[root@VM_0_26_centos tmp]# cp ~/.bashrc bashrc1</div><div class="line">[root@VM_0_26_centos tmp]# cp ~/.bashrc bashrc2</div><div class="line">[root@VM_0_26_centos tmp]# mv bashrc1 bashrc2 test1</div><div class="line"># 如果有多个源文件或目录，则最后一个目标文件一定是目录；</div></pre></td></tr></table></figure>
+<h3 id="取得文件名与完整路径的目录"><a href="#取得文件名与完整路径的目录" class="headerlink" title="取得文件名与完整路径的目录"></a>取得文件名与完整路径的目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@VM_0_26_centos tmp]# basename /etc/sysconfig/network</div><div class="line">network</div><div class="line">[root@VM_0_26_centos tmp]# dirname /etc/sysconfig/network</div><div class="line">/etc/sysconfig</div><div class="line"># 取得文件路径对于在shell script中是很重要的；</div></pre></td></tr></table></figure>
+<h2 id="三、文件内容查看"><a href="#三、文件内容查看" class="headerlink" title="三、文件内容查看"></a>三、文件内容查看</h2><ul>
+<li>cat 由第一行开始显示文件内容</li>
+<li>tac 从最后一行开始显示，可以看出 tac 是 cat 的倒着写！</li>
+<li>nl 显示的时候，顺道输出行号！</li>
+<li>more 一页一页的显示文件内容</li>
+<li>less 与 more 类似，但是比 more 更好的是，他可以往前翻页！</li>
+<li>head 只看头几行</li>
+<li>tail 只看尾巴几行</li>
+<li>od 以二进制的方式读取文件内容！</li>
+</ul>
+<h3 id="直接检视文件内容"><a href="#直接检视文件内容" class="headerlink" title="直接检视文件内容"></a>直接检视文件内容</h3><h4 id="cat-concatenate"><a href="#cat-concatenate" class="headerlink" title="cat    (concatenate)"></a>cat    (concatenate)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">cat [选项列表] [文件列表]...</div><div class="line">选项：</div><div class="line"> -A, --show-all</div><div class="line">    相当于 -vET 的整合选项，可列出一些特殊字符而不是空白而已；</div><div class="line"> -b, --number-nonblank</div><div class="line">    列出行号，仅针对非空白行做行号显示，空白行不标行号！</div><div class="line"> -E,  --show-ends</div><div class="line">    将结尾的断行字符 $ 显示出来；</div><div class="line"> -n, --number</div><div class="line">    打印出行号，连同空白行也会有行号，与 -b 的选项不同；</div><div class="line"> -T, --show-tabs</div><div class="line">    将 [tab] 按键以 ^I 显示出来；</div><div class="line"> -v, --show-nonprinting</div><div class="line">    列出一些看不出来的特殊字符</div><div class="line"></div><div class="line">范例一：查看 /etc/issue 这个文件的内容</div><div class="line">[root@VM_0_26_centos ~]# cat /etc/issue</div><div class="line">\S</div><div class="line">Kernel \r on an \m</div><div class="line"></div><div class="line">范例二：在上一题的基础上加上行号</div><div class="line">[root@VM_0_26_centos ~]# cat -n /etc/issue  #第一种方法</div><div class="line"> 1	\S</div><div class="line"> 2	Kernel \r on an \m</div><div class="line"> 3</div><div class="line">[root@VM_0_26_centos ~]# cat -b /etc/issue  #第二种方法</div><div class="line"> 1	\S</div><div class="line"> 2	Kernel \r on an \m</div></pre></td></tr></table></figure>
+<h4 id="tac-反向列出文本"><a href="#tac-反向列出文本" class="headerlink" title="tac    (反向列出文本)"></a>tac    (反向列出文本)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[xiangcl@VM_0_26_centos ~]$ tac /etc/issue</div><div class="line"></div><div class="line">Kernel \r on an \m</div><div class="line">\S</div><div class="line"># 与上面 cat的显示效果相反，是由最后一行开始显示的。</div></pre></td></tr></table></figure>
+<h4 id="nl-number-lines-of-files-添加行号打印"><a href="#nl-number-lines-of-files-添加行号打印" class="headerlink" title="nl - number lines of files     (添加行号打印)"></a>nl - number lines of files     (添加行号打印)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">nl [OPTION]... [FILE]...</div><div class="line">OPTION:</div><div class="line">-b, --body-numbering=STYLE ：指定行号指定的方式，主要有两种：</div><div class="line">    -b a ：表示不论是否为空行，也同样列出行号（类似 cat -n） ；</div><div class="line">    -b t ：如果有空行，空的那一行不要列出行号（默认值） ；</div><div class="line">-n, --number-format=FORMAT ：列出行号表示的方法，主要有三种：</div><div class="line">    -n ln ：行号在屏幕的最左方显示；</div><div class="line">    -n rn ：行号在自己字段的最右方显示，且不加 0 ；</div><div class="line">    -n rz ：行号在自己字段的最右方显示，且加 0 ；</div><div class="line">-w, --number-width=NUMBER ：行号字段的占用的字符数。</div><div class="line"></div><div class="line">范例一：用 nl 列出 /etc/issue 的内容</div><div class="line">[xiangcl@VM_0_26_centos ~]$ nl /etc/issue</div><div class="line"> 1	\S</div><div class="line"> 2	Kernel \r on an \m</div><div class="line"></div><div class="line"># 这个文件有三行，第三行为空白(没有任何字符)</div><div class="line"># 因为他是空白行，所以 nl 不会加上行号，所以如果确定要加上行号，可以这样做：</div><div class="line"></div><div class="line">[xiangcl@VM_0_26_centos ~]$ nl -b a /etc/issue</div><div class="line"> 1	\S</div><div class="line"> 2	Kernel \r on an \m</div><div class="line"> 3</div><div class="line"># 行号加上了，如果要让行号前面自动补上0，可以这样做：</div><div class="line"></div><div class="line">[xiangcl@VM_0_26_centos ~]$ nl -b a -n rz /etc/issue</div><div class="line">000001	\S</div><div class="line">000002	Kernel \r on an \m</div><div class="line">000003</div><div class="line"># 自动在字段的地方补上 0 了，默认字段是六位数，如何改为三位数呢？</div><div class="line"></div><div class="line">[xiangcl@VM_0_26_centos ~]$ nl -b a -n rz -w 3 /etc/issue</div><div class="line">001	\S</div><div class="line">002	Kernel \r on an \m</div><div class="line">003</div></pre></td></tr></table></figure>
+<h3 id="可翻页查看文本"><a href="#可翻页查看文本" class="headerlink" title="可翻页查看文本"></a>可翻页查看文本</h3><p>前面提到的nl、cat与tac命令，都是一次性将数据一口气显示到屏幕上，接下来介绍一下可翻页显示的指令。</p>
+<h4 id="more-在显示器上阅读文件的过滤器"><a href="#more-在显示器上阅读文件的过滤器" class="headerlink" title="more   (在显示器上阅读文件的过滤器)"></a>more   (在显示器上阅读文件的过滤器)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">more [-dlfpcsu] [-num] [+/ pattern] [+ linenum] [file ...]</div><div class="line">OPTION：</div><div class="line">    -num:  这个选项指定屏幕的行数 (以整数表示).     # num不是输入num而是输入数字；</div><div class="line">    -f: 使 more 计数 逻辑行, 而不是 屏幕行 (就是说, 长行 不会 断到 下一行).   -d：显示翻页及退出提示</div><div class="line"></div><div class="line">[xiangcl@VM_0_26_centos ~]$ more  /etc/man_db.conf</div><div class="line"># 使用这个指令后就会进入阅读模式，那么，怎么操作呢？</div><div class="line"></div><div class="line"></div><div class="line">- 空白键 （space）：代表向下翻一页；</div><div class="line">- Enter： 代表向下翻“一行”；</div><div class="line">- / 字串 ：代表在这个显示的内容当中，向下搜寻“字串”这个关键字；</div><div class="line">- :f： 立刻显示出文件名以及目前显示的行数；</div><div class="line">- q： 代表立刻离开 more ，不再显示该文件内容。</div><div class="line">- b 或 [ctrl]-b ：代表往回翻页，不过这动作只对文件有用，对管道无用。</div></pre></td></tr></table></figure>
+<p><img src="http://xiangclimg-10066880.cos.myqcloud.com/more_user.gif" alt=""></p>
+<p>这里特别强调的是搜索这个指令，在 more 的阅读模式下，直接输入 / 后，光标就会跑到最下面一行，并且等待你的输入，你输入需要搜索的字串后并按下[enter]，more就会向下搜索该字符串，向下使用 n 即可。最后按 q 键退出。</p>
+<h4 id="less-一页一页翻动"><a href="#less-一页一页翻动" class="headerlink" title="less   (一页一页翻动)"></a>less   (一页一页翻动)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[xiangcl@VM_0_26_centos ~]$ less /etc/man_db.conf</div></pre></td></tr></table></figure>
+<p>在 less 查看文件时常用的指令：</p>
+<ul>
+<li>空白键： 向下翻动一页；</li>
+<li>[pagedown]： 向下翻动一页；</li>
+<li>[pageup]： 向上翻动一页；</li>
+<li>/ 字串： 向下搜寻“字串”的功能；</li>
+<li>? 字串： 向上搜寻“字串”的功能；</li>
+<li>n： 重复前一个搜寻 （与 / 或 ? 有关！）</li>
+<li>N： 反向的重复前一个搜寻 （与 / 或 ? 有关！）</li>
+<li>g： 前进到这个数据的第一行去；</li>
+<li>G： 前进到这个数据的最后一行去（注意大小写） ；</li>
+<li>q： 离开 less 这个程序；</li>
+</ul>
+<p>个人觉得相对于<code>more</code>指令来说<code>less</code>要好用，不过存在即有存在的道理，这其中好处还需诸君自行体会。</p>
+<h3 id="数据撷取"><a href="#数据撷取" class="headerlink" title="数据撷取"></a>数据撷取</h3><p>有的时候，我们仅仅只需要对文件有个了解。而前面所了解到的指令都是将全文输出，下面我们来了解一下怎样对数据进行简单的撷取。取前面几行文本(head)或取后面(tail)几行文文本。</p>
+<p>注意：head与tail都是以 行 为当位进行数据的撷取。</p>
+<h4 id="head-输出文件开始的部分"><a href="#head-输出文件开始的部分" class="headerlink" title="head   (输出文件开始的部分)"></a>head   (输出文件开始的部分)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">-c #</div><div class="line">    指定获取前#字节</div><div class="line">-n #, --lines=NUMBER</div><div class="line">      显示起始的NUMBER行,而非默认的起始10行</div><div class="line"></div><div class="line">-q, --quiet, --silent</div><div class="line">      不显示包含给定文件名的文件头</div><div class="line"></div><div class="line">-v, --verbose</div><div class="line">      总是显示包含给定文件名的文件头</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">[xiangcl@VM_0_26_centos ~]$ head /etc/man_db.conf   #默认显示前10行</div><div class="line">#</div><div class="line">#</div><div class="line"># This file is used by the man-db package to configure the man and cat paths.</div><div class="line"># It is also used to provide a manpath for those without one by examining</div><div class="line"># their PATH environment variable. For details see the manpath(5) man page.</div><div class="line">#</div><div class="line"># Lines beginning with `#&apos; are comments and are ignored. Any combination of</div><div class="line"># tabs or spaces may be used as `whitespace&apos; separators.</div><div class="line">#</div><div class="line"># There are three mappings allowed in this file:</div><div class="line"></div><div class="line">[xiangcl@VM_0_26_centos ~]$ head -n 3 /etc/man_db.conf    #可以直接指定要显示的行数</div><div class="line">#</div><div class="line">#</div><div class="line"># This file is used by the man-db package to configure the man and cat paths.</div><div class="line"></div><div class="line">[xiangcl@VM_0_26_centos ~]$ head -n 3 -v  /etc/man_db.conf    #显示前三行且在开始处显示文件路径</div><div class="line">==&gt; /etc/man_db.conf &lt;==</div><div class="line">#</div><div class="line">#</div><div class="line"># This file is used by the man-db package to configure the man and cat paths.</div></pre></td></tr></table></figure>
+<p><em>如果 <code>-n</code> 后面接的是负数的话，则仅仅显示前面的行数。例如： CentOS 7.1 的 <code>/etc/mandb.conf</code> 共有131行，则上述的指令<code>head -n -100 /etc/man_db.conf</code> 就会列出前面31行，后面100行不会被打印出来。</em></p>
+<h4 id="tail-输出文件末尾部分"><a href="#tail-输出文件末尾部分" class="headerlink" title="tail   (输出文件末尾部分)"></a>tail   (输出文件末尾部分)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">-c, --bytes=N</div><div class="line">      输出最后N个字节</div><div class="line"></div><div class="line">-f, --follow[=&#123;name|descriptor&#125;]</div><div class="line">      当文件增长时,输出后续添加的数据;  -f, --follow以及 --follow=descriptor</div><div class="line">      都是相同的意思</div><div class="line"></div><div class="line">-n, --lines=N</div><div class="line">      输出最后N行,而非默认的最后10行</div><div class="line"></div><div class="line">--pid=PID</div><div class="line">      与-f合用,表示在进程ID,PID死掉之后结束.</div><div class="line"></div><div class="line">-q, --quiet, --silent</div><div class="line">      从不输出给出文件名的首部</div><div class="line"></div><div class="line">-s, --sleep-interval=S</div><div class="line">      与-f合用,表示在每次反复的间隔休眠S秒</div><div class="line"></div><div class="line">-v, --verbose</div><div class="line">      总是输出给出文件名的首部</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[xiangcl@VM_0_26_centos ~]$ tail /etc/man_db.conf</div><div class="line"># 默认情况下显示的是最后10行</div><div class="line"># 如果要显示最后20行，则可以写成：</div><div class="line">[xiangcl@VM_0_26_centos ~]$ tail -n 20 /etc/man_db.conf</div><div class="line"></div><div class="line">范例一 ：如果不知道 /etc/man_db.conf 有多少行，却只想列出100行以后的数据：</div><div class="line">[xiangcl@VM_0_26_centos ~]$ tail -n +100 /etc/man_db.conf</div><div class="line"></div><div class="line">范例二 ：持续侦测 /var/log/messages 的内容</div><div class="line">[root@VM_0_26_centos ~]# tail -f /var/log/messages</div><div class="line"># 如果文件内容有变化的话会持续更新，退出请按[Crtl]+c;</div></pre></td></tr></table></figure>
+<p><em>Note：</em>范例二必须使用root身份才行。*</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">例题一： 显示 /etc/man_db.conf 的第 11 到第 20 行</div><div class="line"># 思路：先取前20行，再取后10行；</div><div class="line">$ head -n 20 /etc/man_db.conf | tail -n 10</div><div class="line"></div><div class="line">例题二： 显示 /etc/man_db.conf 的第 11 到第 20 行，且带行号</div><div class="line">$ cat -n /etc/man_db.conf | head -n 20 | tail -n 10</div></pre></td></tr></table></figure>
+<h3 id="非纯文本文件：od"><a href="#非纯文本文件：od" class="headerlink" title="非纯文本文件：od"></a>非纯文本文件：od</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">od [OPTION]... [FILE]...</div><div class="line">od [-abcdfilosx]... [FILE] [[+]OFFSET[.][b]]</div><div class="line">od --traditional [OPTION]... [FILE] [[+]OFFSET[.][b] [+][LABEL][.][b]]</div><div class="line"></div><div class="line">OPTION:</div><div class="line">    -t, --format=TYPE ：后面可以接各种“类型 （ TYPE） ”的输出，例如：</div><div class="line">        a ：利用默认的字符来输出；</div><div class="line">        c ：使用 ASCII 字符来输出</div><div class="line">        d[size] ：利用十进制（ decimal） 来输出数据，每个整数占用 size Bytes ；</div><div class="line">        f[size] ：利用浮点数值（ floating） 来输出数据，每个数占用 size Bytes ；</div><div class="line">        o[size] ：利用八进位（ octal） 来输出数据，每个整数占用 size Bytes ；</div><div class="line">        x[size] ：利用十六进制（ hexadecimal） 来输出数据，每个整数占用 size Bytes ；</div><div class="line"></div><div class="line">范例一： 将/usr/bin/passwd的内容使用ASCII方式来展现</div><div class="line">[root@VM_0_26_centos ~]# od -t c /usr/bin/passwd</div><div class="line"></div><div class="line">范例二：将/etc/issue这个文件的内容以8进位列出储存值与ASCII的对照表</div><div class="line">[root@VM_0_26_centos ~]# od -t oCc /etc/issue</div><div class="line">0000000 134 123 012 113 145 162 156 145 154 040 134 162 040 157 156 040</div><div class="line">          \   S  \n   K   e   r   n   e   l       \   r       o   n</div><div class="line">0000020 141 156 040 134 155 012 012</div><div class="line">          a   n       \   m  \n  \n</div><div class="line">0000027</div><div class="line"># 如上所示，可以发现每个字符可以对应到的数值为何！要注意的是，该数值是 8 进位</div><div class="line"># 例如 S 对应的记录数值为 123 ，转成十进制：1x8^2+2x8+3=83。</div></pre></td></tr></table></figure>
+<h3 id="修改文件时间或创建新文件：touch"><a href="#修改文件时间或创建新文件：touch" class="headerlink" title="修改文件时间或创建新文件：touch"></a>修改文件时间或创建新文件：touch</h3><p>我们在 <code>ls</code> 这个指令的介绍时，有稍微提到每个文件在linux下面都会记录许多的时间参数， 其实有三个主要的变动时间，那么三个时间的意义是什么呢？</p>
+<ul>
+<li>modification time （mtime） ： 当该文件的“内容数据”变更时，就会更新这个时间！内容数据指的是文件的内容，而不是文件的属性或权限喔！</li>
+<li>status time （ctime） ： 当该文件的“状态 （status）”改变时，就会更新这个时间，举例来说，像是权限与属性被更改了，都会更新这个时间啊。</li>
+<li>access time （atime） ： 当“该文件的内容被取用”时，就会更新这个读取时间（access） 。举例来说，我们使用 cat 去读取 /etc/man_db.conf ， 就会更新该文件的atime 了。</li>
+</ul>
+<p>举例：查看 <code>/etc/man_db.conf</code> 这个文件的时间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@VM_0_26_centos ~]# date; ls -l /etc/man_db.conf ;ls -l --time=atime /etc/man_db.conf ; ls -l --time=ctime /etc/man_db.conf</div><div class="line">2016年 11月 12日 星期六 14:57:46 CST  # 显示目前的时间</div><div class="line">-rw-r--r--. 1 root root 5171 6月  10 2014 /etc/man_db.conf   # 创建内容的时间（mtime）</div><div class="line">-rw-r--r--. 1 root root 5171 6月  10 2014 /etc/man_db.conf   # 读取内容的时间（atime）</div><div class="line">-rw-r--r--. 1 root root 5171 1月  20 2015 /etc/man_db.conf   # 更新状态的时间（ctime）</div></pre></td></tr></table></figure>
+<p><em>默认情况下 <code>ls</code> 显示的是该文件的mtime，也就是这个文件内容上次被更改的时间。</em></p>
+<p>文件的时间是很重要的，因为，如果文件的时间误判的话，可能会造成某些程序无法顺利的运行。</p>
+<p>如果我们要修改文件时间则使用 <code>touch</code> 命令修改。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">touch - 修改文件的时间戳记.</div><div class="line"> touch [-acm][-r ref_file(参照文件)|-t time(时间值)] file(文件名)...</div><div class="line">OPTION:</div><div class="line">    -a</div><div class="line">        修改文件 file 的存取时间，也就是仅修订 access time；</div><div class="line">    -c</div><div class="line">        仅修改文件的时间，若该文件不存在则不创建新文件；</div><div class="line">    -d, --date=time</div><div class="line">        后面可以接欲修订的日期而不用目前的日期，也可以使用 --date=&quot;日期或时间&quot;</div><div class="line">    -m, --time=mtime, --time=modify</div><div class="line">        仅修改 mtime ；</div><div class="line">    -t STAMP，decimtime</div><div class="line">        后面可以接欲修订的时间而不用目前的时间，格式为[YYYYMMDDhhmm]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">范例一：新建一个空的文件并观察时间</div><div class="line">[xiangcl@VM_0_26_centos ~]$ cd /tmp/</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ touch testtouch</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ ls -l testtouch</div><div class="line">-rw-rw-r-- 1 xiangcl xiangcl 0 11月 14 09:13 testtouch</div><div class="line"></div><div class="line"># 新文件的大小为0。在默认状态下，如果 touch 后接有文件，则该文件的三个时间（atime/ctime/mtime）都会更新为目前的时间，若该文件不存在，则会主动的创建一个新的空文件。</div><div class="line"></div><div class="line">范例二：将 ~/.bashrc 复制为 bashrc ，复制完整的属性，并检查其日期。</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ cp -a ~/.bashrc bashrc</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ date; ll bashrc; ll --time=atime bashrc; ll --time=ctime bashrc</div><div class="line">2016年 11月 14日 星期一 09:21:02 CST                      # 这是当前的时间</div><div class="line">-rw-r--r-- 1 xiangcl xiangcl 231 8月   3 00:00 bashrc    # 这是mtime的时间</div><div class="line">-rw-r--r-- 1 xiangcl xiangcl 231 8月   3 00:00 bashrc    # 这是atime的时间</div><div class="line">-rw-r--r-- 1 xiangcl xiangcl 231 11月 14 09:20 bashrc    # 这是ctime的时间</div><div class="line"></div><div class="line"># 在执行结果中，可以看到数据的内容与属性完全被复制过来，因此文件内容时间（mtime）与原本文件相同，但是由于这个文件是刚刚被创建的，因此状态（ ctime） 就变成现在的时间。</div><div class="line"></div><div class="line">范例三：修改范例二的 bashrc 文件，将日期（ctime）调整为两天前</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ date; ll bashrc; ll --time=atime bashrc; ll --time=ctime bashrc;</div><div class="line">2016年 11月 14日 星期一 09:46:44 CST</div><div class="line">-rw-r--r-- 1 xiangcl xiangcl 231 11月 12 09:46 bashrc</div><div class="line">-rw-r--r-- 1 xiangcl xiangcl 231 11月 12 09:46 bashrc</div><div class="line">-rw-r--r-- 1 xiangcl xiangcl 231 11月 14 09:46 bashrc</div><div class="line"># （atime/ctime）变成了当前时间的 2 天以前，不过 ctime 并没有跟着改变。</div><div class="line"></div><div class="line">范例四：将上个范例的bashrc日期改为 2015/11/11 11:11</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ touch -t 201511111111 bashrc</div><div class="line">[xiangcl@VM_0_26_centos tmp]$ date; ll bashrc; ll --time=atime bashrc; ll --time=ctime bashrc;</div><div class="line">2016年 11月 14日 星期一 09:50:25 CST</div><div class="line">-rw-r--r-- 1 xiangcl xiangcl 231 11月 11 2015 bashrc</div><div class="line">-rw-r--r-- 1 xiangcl xiangcl 231 11月 11 2015 bashrc</div><div class="line">-rw-r--r-- 1 xiangcl xiangcl 231 11月 14 09:50 bashrc</div><div class="line"># 时间atime和mtime都改变了，唯独ctime记录了当前的时间。</div></pre></td></tr></table></figure>
+<p><em>Note：1、即使我们复制一个文件时，复制所有的属性，但也没有办法复制ctime 这个属性的。 ctime 可以记录这个文件最近的状态 （ status） 被改变的时间。2、平时看的文件属性中，比较重要的还是属于那个 mtime</em></p>
+<h4 id="touch-指令常用情景"><a href="#touch-指令常用情景" class="headerlink" title="touch 指令常用情景"></a>touch 指令常用情景</h4><ul>
+<li>创建一个空文件</li>
+<li>修改文件时间（mtime和atime）</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+            <a href="/tags/Linux基础/" rel="tag">#Linux基础</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Linux/linux-file-dir-man-two.html" rel="next" title="Linux文件与目录管理2">
+                <i class="fa fa-chevron-left"></i> Linux文件与目录管理2
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/linux/linux-user-groups.html" rel="prev" title="详解Linux用户和组的权限管理及相关命令">
+                详解Linux用户和组的权限管理及相关命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/touxiang.jpg"
+               alt="向常乐" />
+          <p class="site-author-name" itemprop="name">向常乐</p>
+          <p class="site-description motion-element" itemprop="description">向常乐的个人Blog</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiangcl" target="_blank" rel="external nofollow"  title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/xiangcle" target="_blank" rel="external nofollow"  title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://segmentfault.com/u/xiangcl" title="Segmentfault" target="_blank">Segmentfault</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、目录与路径"><span class="nav-number">1.</span> <span class="nav-text">一、目录与路径</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#相对路径与绝对路径"><span class="nav-number">1.1.</span> <span class="nav-text">相对路径与绝对路径</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-绝对路径：路径的写法“一定由跟目录-写起”"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.绝对路径：路径的写法“一定由跟目录 / 写起”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-相对路径：路径的写法“不是由-写起”"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.相对路径：路径的写法“不是由/写起”</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录的相关操作"><span class="nav-number">1.2.</span> <span class="nav-text">目录的相关操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊目录"><span class="nav-number">1.2.1.</span> <span class="nav-text">特殊目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的目录处理指令"><span class="nav-number">1.2.2.</span> <span class="nav-text">常见的目录处理指令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#cd-change-directory-变换目录"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">cd (change directory, 变换目录)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pwd-OPTION-（显示目前所在的目录）"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">pwd [OPTION]  （显示目前所在的目录）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mkdir-options-file…-创建新目录"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">mkdir [options] file…   (创建新目录)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#rmdir-（删除“空”目录）"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">rmdir  （删除“空”目录）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件内容类型查看命令：file"><span class="nav-number">1.3.</span> <span class="nav-text">文件内容类型查看命令：file</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回显命令：echo"><span class="nav-number">1.4.</span> <span class="nav-text">回显命令：echo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#which：显示命令对应的程序文件路径"><span class="nav-number">1.5.</span> <span class="nav-text">which：显示命令对应的程序文件路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#whatis-用于查询一个命令执行什么功能，并将查询结果打印到终端上"><span class="nav-number">1.6.</span> <span class="nav-text">whatis :用于查询一个命令执行什么功能，并将查询结果打印到终端上</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、文件与目录管理"><span class="nav-number">2.</span> <span class="nav-text">二、文件与目录管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ls-options-files…-（列出目录的内容）"><span class="nav-number">2.1.</span> <span class="nav-text">ls [options] [files…]       （列出目录的内容）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制-cp-、删除-rm-与移动-mv"><span class="nav-number">2.2.</span> <span class="nav-text">复制(cp)、删除(rm)与移动(mv)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cp-复制文件或目录"><span class="nav-number">2.2.1.</span> <span class="nav-text">cp    (复制文件或目录)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm-移除文件或目录"><span class="nav-number">2.2.2.</span> <span class="nav-text">rm  (移除文件或目录)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#小结"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mv-移动文件与目录、或用于文件更名"><span class="nav-number">2.2.3.</span> <span class="nav-text">mv     (移动文件与目录、或用于文件更名)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#取得文件名与完整路径的目录"><span class="nav-number">2.3.</span> <span class="nav-text">取得文件名与完整路径的目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、文件内容查看"><span class="nav-number">3.</span> <span class="nav-text">三、文件内容查看</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接检视文件内容"><span class="nav-number">3.1.</span> <span class="nav-text">直接检视文件内容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cat-concatenate"><span class="nav-number">3.1.1.</span> <span class="nav-text">cat    (concatenate)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tac-反向列出文本"><span class="nav-number">3.1.2.</span> <span class="nav-text">tac    (反向列出文本)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nl-number-lines-of-files-添加行号打印"><span class="nav-number">3.1.3.</span> <span class="nav-text">nl - number lines of files     (添加行号打印)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可翻页查看文本"><span class="nav-number">3.2.</span> <span class="nav-text">可翻页查看文本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#more-在显示器上阅读文件的过滤器"><span class="nav-number">3.2.1.</span> <span class="nav-text">more   (在显示器上阅读文件的过滤器)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#less-一页一页翻动"><span class="nav-number">3.2.2.</span> <span class="nav-text">less   (一页一页翻动)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据撷取"><span class="nav-number">3.3.</span> <span class="nav-text">数据撷取</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#head-输出文件开始的部分"><span class="nav-number">3.3.1.</span> <span class="nav-text">head   (输出文件开始的部分)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tail-输出文件末尾部分"><span class="nav-number">3.3.2.</span> <span class="nav-text">tail   (输出文件末尾部分)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非纯文本文件：od"><span class="nav-number">3.4.</span> <span class="nav-text">非纯文本文件：od</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文件时间或创建新文件：touch"><span class="nav-number">3.5.</span> <span class="nav-text">修改文件时间或创建新文件：touch</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#touch-指令常用情景"><span class="nav-number">3.5.1.</span> <span class="nav-text">touch 指令常用情景</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向常乐</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

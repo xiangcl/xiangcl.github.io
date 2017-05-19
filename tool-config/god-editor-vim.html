@@ -1,0 +1,1247 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="GMsZTqIe9hTE0zeMQRvithqQtn6iRgHbqVH21JfYNEs" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Linux,VIM,编辑器," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="向常乐的Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="在这天地间，流传这两大神器的故事：据说Emacs是神的编辑器，而Vim是编辑器之神。正所谓，工欲善其事,必先利其器。今天就和大家分享一下关于编辑器之神Vim的传说。
+
+一、Vim的历史1.下图是关于几款主流编辑器的学习曲线:(注：图片来自互联网)
+
+
+2.VIM - Vi IMproved3.上图中vi即是vim的前身
+VI：Visual Interface
+
+4.VIM和VI是文本编辑器
+何为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编辑器之神-VIM">
+<meta property="og:url" content="http://xiangcl.com/tool-config/god-editor-vim.html">
+<meta property="og:site_name" content="向常乐的Blog">
+<meta property="og:description" content="在这天地间，流传这两大神器的故事：据说Emacs是神的编辑器，而Vim是编辑器之神。正所谓，工欲善其事,必先利其器。今天就和大家分享一下关于编辑器之神Vim的传说。
+
+一、Vim的历史1.下图是关于几款主流编辑器的学习曲线:(注：图片来自互联网)
+
+
+2.VIM - Vi IMproved3.上图中vi即是vim的前身
+VI：Visual Interface
+
+4.VIM和VI是文本编辑器
+何为">
+<meta property="og:image" content="http://i.imgur.com/PomSdCa.jpg">
+<meta property="og:image" content="http://i.imgur.com/Qsy3Rmx.png">
+<meta property="og:image" content="http://i.imgur.com/PFTgCJ0.png">
+<meta property="og:image" content="http://i.imgur.com/h4I4Wxi.png">
+<meta property="og:updated_time" content="2017-05-18T09:02:42.514Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编辑器之神-VIM">
+<meta name="twitter:description" content="在这天地间，流传这两大神器的故事：据说Emacs是神的编辑器，而Vim是编辑器之神。正所谓，工欲善其事,必先利其器。今天就和大家分享一下关于编辑器之神Vim的传说。
+
+一、Vim的历史1.下图是关于几款主流编辑器的学习曲线:(注：图片来自互联网)
+
+
+2.VIM - Vi IMproved3.上图中vi即是vim的前身
+VI：Visual Interface
+
+4.VIM和VI是文本编辑器
+何为">
+<meta name="twitter:image" content="http://i.imgur.com/PomSdCa.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://xiangcl.com/tool-config/god-editor-vim.html"/>
+
+
+  <title> 编辑器之神-VIM | 向常乐的Blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-86793462-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?2f2c82bc4fe99249065382469fb4a3d1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=59276703";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">向常乐的Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">知足者 常乐也！</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                编辑器之神-VIM
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-18T17:02:42+08:00" content="2017-05-18">
+              2017-05-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/工具配置/" itemprop="url" rel="index">
+                    <span itemprop="name">工具配置</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>在这天地间，流传这两大神器的故事：据说Emacs是神的编辑器，而Vim是编辑器之神。正所谓，工欲善其事,必先利其器。今天就和大家分享一下关于编辑器之神Vim的传说。</p>
+</blockquote>
+<h2 id="一、Vim的历史"><a href="#一、Vim的历史" class="headerlink" title="一、Vim的历史"></a>一、Vim的历史</h2><h3 id="1-下图是关于几款主流编辑器的学习曲线-注：图片来自互联网"><a href="#1-下图是关于几款主流编辑器的学习曲线-注：图片来自互联网" class="headerlink" title="1.下图是关于几款主流编辑器的学习曲线:(注：图片来自互联网)"></a>1.下图是关于几款主流编辑器的学习曲线:<em>(注：图片来自互联网)</em></h3><ul>
+<li><img src="http://i.imgur.com/PomSdCa.jpg" alt=""></li>
+</ul>
+<h3 id="2-VIM-Vi-IMproved"><a href="#2-VIM-Vi-IMproved" class="headerlink" title="2.VIM - Vi IMproved"></a>2.VIM - Vi IMproved</h3><h3 id="3-上图中vi即是vim的前身"><a href="#3-上图中vi即是vim的前身" class="headerlink" title="3.上图中vi即是vim的前身"></a>3.上图中vi即是vim的前身</h3><ul>
+<li>VI：Visual Interface</li>
+</ul>
+<h3 id="4-VIM和VI是文本编辑器"><a href="#4-VIM和VI是文本编辑器" class="headerlink" title="4.VIM和VI是文本编辑器"></a>4.VIM和VI是文本编辑器</h3><ul>
+<li><strong>何为文本文件？</strong><ul>
+<li>文本文件一般指只有字符原生编码构成的二进制计算机文件，与富文本相比，其不包含字样样式的控制元素，能够被最简单的文本编辑器直接读取</li>
+</ul>
+</li>
+<li><strong>文本文件常见的格式？</strong><ul>
+<li>ASCII、MIME、.txt、…</li>
+</ul>
+</li>
+<li><strong>那么，何为文本编辑器？</strong><ul>
+<li>文本编辑器是计算机软件中的一种。主要用于用来编写和查看文本文件。</li>
+</ul>
+</li>
+<li><strong>文本编辑器的种类：</strong><ul>
+<li><strong>行编辑器</strong>：sed</li>
+<li><strong>全屏编辑器</strong>：nano、vi、vim</li>
+</ul>
+</li>
+</ul>
+<h2 id="二、Vim编辑器的基本操作"><a href="#二、Vim编辑器的基本操作" class="headerlink" title="二、Vim编辑器的基本操作"></a>二、Vim编辑器的基本操作</h2><h3 id="1-基本操作"><a href="#1-基本操作" class="headerlink" title="1. 基本操作"></a>1. 基本操作</h3><ol>
+<li><p>VIM：模式化的编辑器</p>
+</li>
+<li><p>基本模式</p>
+<ul>
+<li><strong>编辑模式</strong> （命令模式）</li>
+<li><strong>输入模式</strong> （插入模式）</li>
+<li><strong>末行模式</strong> （vim内置的命令行接口）</li>
+<li><em>Note</em>：打开的时候<strong>默认</strong>的模式是编辑模式</li>
+</ul>
+</li>
+<li><p>打开文件</p>
+<ul>
+<li><code># vim [OPTION]... FILE...</code></li>
+<li><code>+#</code>：打开文件后，直接让光标处于第#行的行首</li>
+<li><code>+/PATTERN</code>：打开文件后，直接让光标处于第一个被PATTERN匹配到的行的行首；</li>
+</ul>
+</li>
+<li><p>模式转换</p>
+</li>
+</ol>
+<ul>
+<li>模式转换：<ul>
+<li><em>编辑模式 - - &gt; 输入模式</em><ul>
+<li><code>i</code>：<em>insert</em>，在光标所在处<strong>前面</strong>插入；</li>
+<li><code>a</code>：<em>append</em>，在光标所在处的<strong>后面</strong>插入；</li>
+<li><code>o</code>：<em>open</em>，在当前光标所在行的<strong>下一行</strong>打开新行，并转换为输入模式；</li>
+<li><code>I</code>：在当前光标所在行的<strong>行首</strong>输入；</li>
+<li><code>A</code>：在当前光标所在行的<strong>行尾</strong>输入；</li>
+<li><code>O</code>：在光标所在行的<strong>上一行</strong>打开一个新行，并转换为输入模式；</li>
+</ul>
+</li>
+<li><em>输入模式 - - &gt; 编辑模式</em><ul>
+<li><code>ESC</code></li>
+</ul>
+</li>
+<li><em>编辑模式 - - &gt; 末行模式</em><ul>
+<li><code>：</code></li>
+</ul>
+</li>
+<li><em>末行模式 - - &gt; 编辑模式</em><ul>
+<li><code>ESC</code></li>
+</ul>
+</li>
+<li>关闭文件<ul>
+<li><code>:q</code>：退出</li>
+<li><code>:!</code>：强制退出，丢弃做出的修改；</li>
+<li><code>:wq</code>：保存退出；</li>
+<li><code>:x</code>：保存退出；</li>
+<li><code>:w /PATH/TO/SOMEWHERE</code>：当前编辑的文本保存到别的文件；</li>
+<li><code>ZZ</code>：保存退出；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>图示说明如下： <em>（转载请注明出处）</em><ul>
+<li><img src="http://i.imgur.com/Qsy3Rmx.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-光标跳转："><a href="#2-光标跳转：" class="headerlink" title="2. 光标跳转："></a>2. 光标跳转：</h3><ol>
+<li>字符间跳转：<ul>
+<li><code>h，j，k，l</code><ul>
+<li><code>h</code>：<strong>左</strong></li>
+<li><code>l</code>：<strong>右</strong></li>
+<li><code>k</code>：<strong>上</strong></li>
+<li><code>j</code>：<strong>下</strong></li>
+</ul>
+</li>
+<li><code>#COMMAND</code>：跳转由#指定的个数的字符；</li>
+</ul>
+</li>
+<li>单词间跳转：<ul>
+<li><code>w</code>：跳转至下一个单词或后一个单词的<strong>词首</strong>；</li>
+<li><code>e</code>：跳转至当前或下一个单词的<strong>词尾</strong>；</li>
+<li><code>b</code>：跳转至当前或上一个单词的<strong>词首</strong>；</li>
+<li><code>#COMMAND</code>：由#指定一次跳转的单词数；</li>
+</ul>
+</li>
+<li>行首行尾跳转：<ul>
+<li><code>^</code>：跳转至<strong>行首</strong>的第一个非空白字符；</li>
+<li><code>0</code>：跳转至绝对的<strong>行首</strong>；</li>
+<li><code>$</code>：跳转至绝对<strong>行尾</strong>；</li>
+</ul>
+</li>
+<li>行间移动：<ul>
+<li><code>#G</code>：跳转至由#指定行；</li>
+<li><code>G</code>：跳转至最后一行；</li>
+<li><code>1G</code>，<code>gg</code>：跳转至第一行；</li>
+</ul>
+</li>
+<li>句间移动：<ul>
+<li><code>)</code>：跳转至下一个句子；</li>
+<li><code>(</code>：跳转至上一个句子；</li>
+</ul>
+</li>
+<li>段落间移动：<ul>
+<li><code>}</code>：跳转至下一段</li>
+<li><code>{</code>：跳转至上一段</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-vim的编辑命令："><a href="#3-vim的编辑命令：" class="headerlink" title="3. vim的编辑命令："></a>3. vim的编辑命令：</h3><ol>
+<li>字符编辑：<ul>
+<li><code>x</code>：删除光标处的单个字符；</li>
+<li><code>#x</code>：删除光标处起始的#个字符；</li>
+<li><code>xp</code>：交换光标所在处的字符及其后面字符的位置；</li>
+</ul>
+</li>
+<li>替换命令：<ul>
+<li><code>r</code>，<em>replace</em></li>
+<li><code>r</code>：替换光标所在处的字符；（单字符替换）</li>
+</ul>
+</li>
+<li>删除命令：<ul>
+<li><code>d</code>：删除命令，可结合光标跳转字符，实现范围删除；<ul>
+<li><code>d$</code>：删除至绝对行尾</li>
+<li><code>d^</code>：删除至行首的第一个非空白字符</li>
+<li><code>d0</code>：删除至绝对行首</li>
+</ul>
+</li>
+<li><code>dd</code>：删除光标所在行；<ul>
+<li><code>#dd</code>：向下删除#行；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>粘贴命令：<ul>
+<li>（<code>p</code>，put，paste）</li>
+<li><code>p</code>：缓冲区中存储的如果为整行内容，则粘贴至当前光标所在行的<strong>下</strong>方；否则，则粘贴至当前光标所在处的<strong>后</strong>面；</li>
+<li><code>P</code>：缓冲区中存储的如果为整行内容，则粘贴至当前光标所在行的<strong>上</strong>方；否则，则粘贴至当前光标所在处的<strong>前</strong>面；</li>
+</ul>
+</li>
+<li>复制命令：<ul>
+<li><code>y</code>，<em>yank</em></li>
+<li><code>y</code>：复制，工作行行为相似于d命令；<ul>
+<li><code>y$</code>：复制至绝对行尾</li>
+<li><code>y0</code>：复制至绝对行首</li>
+<li><code>y^</code>：复制至行首的第一个非空白字符</li>
+<li><code>yy</code>：复制整行<ul>
+<li><code>#yy</code>：复制多行；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>改变命令：<ul>
+<li><code>c</code>，<em>change</em></li>
+<li><code>c</code>：修改<ul>
+<li><em>编辑模式 - -&gt; 输入模式</em></li>
+</ul>
+</li>
+<li><code>cc</code>：删除并输入新内容</li>
+<li><code>#cc</code>：一次删除#行</li>
+</ul>
+</li>
+</ol>
+<h2 id="三、其它编辑操作"><a href="#三、其它编辑操作" class="headerlink" title="三、其它编辑操作"></a>三、其它编辑操作</h2><h3 id="1-可视化模式"><a href="#1-可视化模式" class="headerlink" title="1.可视化模式"></a>1.可视化模式</h3><ul>
+<li><code>v</code>：按字符选定</li>
+<li><code>V</code>：按行选定</li>
+<li><strong>Note</strong>：经常结合编辑命令；</li>
+</ul>
+<h3 id="2-撤销此前的编辑："><a href="#2-撤销此前的编辑：" class="headerlink" title="2. 撤销此前的编辑："></a>2. 撤销此前的编辑：</h3><ul>
+<li><code>u</code><em>(undo)</em>：撤销此前的操作；<ul>
+<li><code>#u</code>：撤销指定次数的操作；</li>
+</ul>
+</li>
+<li>撤销此前的撤销：<ul>
+<li>Ctrl+r</li>
+</ul>
+</li>
+<li>重复前一个编辑操作：<ul>
+<li><code>.</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="四、翻屏操作"><a href="#四、翻屏操作" class="headerlink" title="四、翻屏操作"></a>四、翻屏操作</h2><ul>
+<li><code>Ctrl+f</code>：向文件尾部翻一屏；</li>
+<li><p><code>Ctrl+b</code>：向文件首部翻一屏；</p>
+</li>
+<li><p><code>Ctrl+d</code>：向文件尾部翻半屏；</p>
+</li>
+<li><p><code>Ctrl+u</code>：向文件首部翻半屏；</p>
+</li>
+<li><p><strong>vim自带的练习教程</strong>：</p>
+<ul>
+<li><code>vimtutor</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="五、vim的末行模式"><a href="#五、vim的末行模式" class="headerlink" title="五、vim的末行模式"></a>五、vim的末行模式</h2><ul>
+<li><strong>内建的命令行接口</strong>；</li>
+<li><strong>特性</strong>：</li>
+<li><strong>(1). 地址定界</strong><ul>
+<li><code>：start_pos,end_pos</code></li>
+<li><code>#：</code>具体的第#行，例如：2表示第2行；</li>
+<li><code>#，#</code>：从左侧#表示起始，到右侧#表示结束；</li>
+<li><code>#,+#</code>：从左侧#表示的行开始，加上右侧#表示的行数；</li>
+<li><code>.</code>当前行；</li>
+<li><code>$</code>：最后一行；</li>
+<li><code>%</code>：全文；相当于（1,$）</li>
+<li><code>/pat1/,/pat2/</code>：表示从第一次被pat1匹配到的行开始，一直到pat2匹配到的行结束</li>
+<li><strong>使用方式</strong>：<ul>
+<li>后跟一个编辑命令：<ul>
+<li><code>d</code>：删除指定范围的内容</li>
+<li><code>y</code>：复制指定范围的内容</li>
+<li><code>w /PATH/TO/SOMEWHERE</code>：将范围内的行另存至指定文件中；</li>
+<li><code>r /PATH/FROM/SOMEFILE</code>：在指定位置插入指定文件中的所有内容；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>(2). 查找</strong><ul>
+<li><code>/PATTERN</code>：从当前光标所在处向文件尾部查找</li>
+<li><code>?PATTERN</code>：从当前光标所在处向文件首部查找<ul>
+<li><code>n</code>：与命令同方向；</li>
+<li><code>N</code>：与命令反方向；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>(3). 查找并替换</strong><ul>
+<li><code>s</code>：在末行模式下完成查找替换操作<ul>
+<li><code>s/要查找的内容/替换为的内容/修饰符</code><ul>
+<li>要查找的内容：可使用模式；</li>
+<li>替换为的内容：不能使用模式，但可以使用\1, \2, …等后向引用符号；好可以使用<code>&quot;&amp;&quot;</code>引用前面查找时查找到的整个内容；</li>
+<li>修饰符：<ul>
+<li><code>i</code>：忽略大小写</li>
+<li><code>g</code>：全局替换;默认情况下，没一行只替换第一次出现的内容；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>查找替换中的分隔符<code>/</code>可替换为其它字符，例如：<ul>
+<li><code>s@@@</code></li>
+<li><code>s###</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="六、vim的文件模式"><a href="#六、vim的文件模式" class="headerlink" title="六、vim的文件模式"></a>六、vim的文件模式</h2><h3 id="1-多文件模式"><a href="#1-多文件模式" class="headerlink" title="1. 多文件模式"></a>1. 多文件模式</h3><ul>
+<li><em>vim FILE1 FILE2 FILE3 …</em><ul>
+<li><code>:next</code> 切换至下一个文本</li>
+<li><code>:prev</code> 切换至前一个文本</li>
+<li><code>:first</code> 切换至前一个文本</li>
+<li><code>:last</code> 切换至最后一个文本</li>
+<li><code>:wall</code> 保存所有</li>
+<li><code>:qall</code> 退出所有</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-窗口分隔模式"><a href="#2-窗口分隔模式" class="headerlink" title="2. 窗口分隔模式"></a>2. 窗口分隔模式</h3><ul>
+<li><em>vim -o|-O FILE1 FILE2 …</em><ul>
+<li><code>-o</code>：水平分割<ul>
+<li><img src="http://i.imgur.com/PFTgCJ0.png" alt=""></li>
+</ul>
+</li>
+<li><code>-O</code>：垂直分割<ul>
+<li><img src="http://i.imgur.com/h4I4Wxi.png" alt=""></li>
+</ul>
+</li>
+<li><strong>在窗口间切换</strong>：<code>Ctrl+w，Arrow</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-单文件窗口分割："><a href="#3-单文件窗口分割：" class="headerlink" title="3. 单文件窗口分割："></a>3. 单文件窗口分割：</h3><ul>
+<li><code>Ctrl+w，s</code>：split，水平分割</li>
+<li><code>Ctrl+w，v</code>：vertical，垂直分割</li>
+</ul>
+<h3 id="4-定制vim的工作特性：（部分）"><a href="#4-定制vim的工作特性：（部分）" class="headerlink" title="4. 定制vim的工作特性：（部分）"></a>4. 定制vim的工作特性：（<em>部分</em>）</h3><ul>
+<li><strong>配置文件</strong>：（永久有效）<ul>
+<li><strong>全局</strong>：<code>/etc/vimrc</code></li>
+<li><strong>个人</strong>：<code>~/.vimrc</code>   (默认不存在，需要自己创建)</li>
+</ul>
+</li>
+<li><strong>末行</strong>：（当前vim进程有效）</li>
+<li><strong>(1) 行号</strong>：<ul>
+<li><strong>显示</strong>：<code>set number</code>，简写为：<code>set nu</code></li>
+<li><strong>取消显示</strong>：<code>set nonumber</code>，简写为：<code>set nonu</code></li>
+</ul>
+</li>
+<li><strong>(2) 括号匹配</strong>：<ul>
+<li><strong>匹配</strong>：<code>set showmatch</code>，简写为：<code>set sm</code></li>
+<li><strong>取消匹配</strong>：<code>set nosm</code></li>
+</ul>
+</li>
+<li><strong>(3) 自动缩进</strong>：<ul>
+<li><strong>开启</strong>：<code>set ai</code></li>
+<li><strong>禁用</strong>：<code>set noai</code></li>
+</ul>
+</li>
+<li><strong>(4) 高亮搜索</strong><ul>
+<li><strong>开启</strong>：<code>set hlsearch</code></li>
+<li><strong>禁用</strong>：<code>set nohlsearch</code></li>
+</ul>
+</li>
+<li><strong>(5) 语法高亮</strong><ul>
+<li><strong>开启</strong>：<code>syntax on</code></li>
+<li><strong>禁用</strong>：<code>syntax off</code></li>
+</ul>
+</li>
+<li><strong>(6) 忽略字符大小写</strong><ul>
+<li><strong>启用</strong>：<code>set ic</code></li>
+<li><strong>禁用</strong>：<code>set noic</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="5-书籍推荐：《Vim-handbook-cn-72》"><a href="#5-书籍推荐：《Vim-handbook-cn-72》" class="headerlink" title="5. 书籍推荐：《Vim-handbook-cn-72》"></a>5. 书籍推荐：《Vim-handbook-cn-72》</h3><h3 id="6-获取帮助"><a href="#6-获取帮助" class="headerlink" title="6. 获取帮助"></a>6. 获取帮助</h3><ul>
+<li>在末行模式下：<code>help SUBJECT</code></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+            <a href="/tags/VIM/" rel="tag">#VIM</a>
+          
+            <a href="/tags/编辑器/" rel="tag">#编辑器</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/linux-collection/linux-answer-three.html" rel="next" title="解决Centos7初次开机提示Initial setup of CentOS Linux 7 (core)">
+                <i class="fa fa-chevron-left"></i> 解决Centos7初次开机提示Initial setup of CentOS Linux 7 (core)
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/graphic-works/graphic-works-WuHanEffect.html" rel="prev" title="武汉印象">
+                武汉印象 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/touxiang.jpg"
+               alt="向常乐" />
+          <p class="site-author-name" itemprop="name">向常乐</p>
+          <p class="site-description motion-element" itemprop="description">向常乐的个人Blog</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiangcl" target="_blank" rel="external nofollow"  title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/xiangcle" target="_blank" rel="external nofollow"  title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://segmentfault.com/u/xiangcl" title="Segmentfault" target="_blank">Segmentfault</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Vim的历史"><span class="nav-number">1.</span> <span class="nav-text">一、Vim的历史</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下图是关于几款主流编辑器的学习曲线-注：图片来自互联网"><span class="nav-number">1.1.</span> <span class="nav-text">1.下图是关于几款主流编辑器的学习曲线:(注：图片来自互联网)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-VIM-Vi-IMproved"><span class="nav-number">1.2.</span> <span class="nav-text">2.VIM - Vi IMproved</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-上图中vi即是vim的前身"><span class="nav-number">1.3.</span> <span class="nav-text">3.上图中vi即是vim的前身</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-VIM和VI是文本编辑器"><span class="nav-number">1.4.</span> <span class="nav-text">4.VIM和VI是文本编辑器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Vim编辑器的基本操作"><span class="nav-number">2.</span> <span class="nav-text">二、Vim编辑器的基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-基本操作"><span class="nav-number">2.1.</span> <span class="nav-text">1. 基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-光标跳转："><span class="nav-number">2.2.</span> <span class="nav-text">2. 光标跳转：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-vim的编辑命令："><span class="nav-number">2.3.</span> <span class="nav-text">3. vim的编辑命令：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、其它编辑操作"><span class="nav-number">3.</span> <span class="nav-text">三、其它编辑操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-可视化模式"><span class="nav-number">3.1.</span> <span class="nav-text">1.可视化模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-撤销此前的编辑："><span class="nav-number">3.2.</span> <span class="nav-text">2. 撤销此前的编辑：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、翻屏操作"><span class="nav-number">4.</span> <span class="nav-text">四、翻屏操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、vim的末行模式"><span class="nav-number">5.</span> <span class="nav-text">五、vim的末行模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、vim的文件模式"><span class="nav-number">6.</span> <span class="nav-text">六、vim的文件模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-多文件模式"><span class="nav-number">6.1.</span> <span class="nav-text">1. 多文件模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-窗口分隔模式"><span class="nav-number">6.2.</span> <span class="nav-text">2. 窗口分隔模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-单文件窗口分割："><span class="nav-number">6.3.</span> <span class="nav-text">3. 单文件窗口分割：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-定制vim的工作特性：（部分）"><span class="nav-number">6.4.</span> <span class="nav-text">4. 定制vim的工作特性：（部分）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-书籍推荐：《Vim-handbook-cn-72》"><span class="nav-number">6.5.</span> <span class="nav-text">5. 书籍推荐：《Vim-handbook-cn-72》</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-获取帮助"><span class="nav-number">6.6.</span> <span class="nav-text">6. 获取帮助</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">向常乐</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

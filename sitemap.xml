@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xiangcl.com/linux-collection/linux-problem-four.html</loc>
+    
+    <lastmod>2017-05-20T08:54:57.598Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangcl.com/linux/vim-problem-two.html</loc>
+    
+    <lastmod>2017-05-20T08:53:31.531Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangcl.com/linux-collection/linux-problem-one.html</loc>
+    
+    <lastmod>2017-05-20T08:53:16.716Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangcl.com/linux-collection/linux-problem-three.html</loc>
+    
+    <lastmod>2017-05-20T08:52:02.240Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xiangcl.com/about/index.html</loc>
     
     <lastmod>2017-05-19T09:31:35.517Z</lastmod>
@@ -10,34 +38,6 @@
   
   <url>
     <loc>http://xiangcl.com/web-front-end/html-css-location.html</loc>
-    
-    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiangcl.com/Linux/linux-file-dir-man-one.html</loc>
-    
-    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiangcl.com/Linux/linux-file-dir-man-two.html</loc>
-    
-    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiangcl.com/tool-config/yum-centos-package-tool.html</loc>
-    
-    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://xiangcl.com/seo/simple-seo-optimization.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     
@@ -58,7 +58,7 @@
   </url>
   
   <url>
-    <loc>http://xiangcl.com/linux-collection/linux-answer-two.html</loc>
+    <loc>http://xiangcl.com/tags/index.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     
@@ -107,21 +107,21 @@
   </url>
   
   <url>
-    <loc>http://xiangcl.com/linux-collection/linux-answer-three.html</loc>
+    <loc>http://xiangcl.com/Linux/linux-file-dir-man-one.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xiangcl.com/linux/vim-problem-one.html</loc>
+    <loc>http://xiangcl.com/Linux/linux-file-dir-man-two.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xiangcl.com/linux-collection/linux-answer-one.html</loc>
+    <loc>http://xiangcl.com/tool-config/yum-centos-package-tool.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     
@@ -135,7 +135,7 @@
   </url>
   
   <url>
-    <loc>http://xiangcl.com/tags/index.html</loc>
+    <loc>http://xiangcl.com/seo/simple-seo-optimization.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     

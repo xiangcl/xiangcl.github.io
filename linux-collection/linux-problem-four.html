@@ -92,7 +92,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux,Linux问题集," />
 
 
 
@@ -110,15 +110,43 @@
 
 
 
-<meta name="description" content="向常乐的个人Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="向常乐的Blog">
-<meta property="og:url" content="http://xiangcl.com/tags/Linux问题集/index.html">
+<meta name="description" content="问题创建用户时出现bash-4.2$
+如图所示
+环境
+问题分析通过useradd方式创建新用户时，都会将所有的配置文件从/etc/skel到/home目录的新用户录下。但现在没有创建默认的文件。
+解决方案
+root远程登录
+手动创建xiangcl的家目录`# mkdir /home/xiangcl
+# chown xiangcl:xiangcl /home/xiangcl
+# chmod 700">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于登录Linux出现 bash4.2$ 的问题">
+<meta property="og:url" content="http://xiangcl.com/linux-collection/linux-problem-four.html">
 <meta property="og:site_name" content="向常乐的Blog">
-<meta property="og:description" content="向常乐的个人Blog">
+<meta property="og:description" content="问题创建用户时出现bash-4.2$
+如图所示
+环境
+问题分析通过useradd方式创建新用户时，都会将所有的配置文件从/etc/skel到/home目录的新用户录下。但现在没有创建默认的文件。
+解决方案
+root远程登录
+手动创建xiangcl的家目录`# mkdir /home/xiangcl
+# chown xiangcl:xiangcl /home/xiangcl
+# chmod 700">
+<meta property="og:image" content="http://i.imgur.com/jW7CWxs.png">
+<meta property="og:image" content="http://i.imgur.com/CotossG.png">
+<meta property="og:updated_time" content="2017-05-20T08:54:57.598Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="向常乐的Blog">
-<meta name="twitter:description" content="向常乐的个人Blog">
+<meta name="twitter:title" content="关于登录Linux出现 bash4.2$ 的问题">
+<meta name="twitter:description" content="问题创建用户时出现bash-4.2$
+如图所示
+环境
+问题分析通过useradd方式创建新用户时，都会将所有的配置文件从/etc/skel到/home目录的新用户录下。但现在没有创建默认的文件。
+解决方案
+root远程登录
+手动创建xiangcl的家目录`# mkdir /home/xiangcl
+# chown xiangcl:xiangcl /home/xiangcl
+# chmod 700">
+<meta name="twitter:image" content="http://i.imgur.com/jW7CWxs.png">
 
 
 
@@ -139,10 +167,10 @@
 
 
 
-  <link rel="canonical" href="http://xiangcl.com/tags/Linux问题集/"/>
+  <link rel="canonical" href="http://xiangcl.com/linux-collection/linux-problem-four.html"/>
 
 
-  <title> 标签: Linux问题集 | 向常乐的Blog </title>
+  <title> 关于登录Linux出现 bash4.2$ 的问题 | 向常乐的Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -191,7 +219,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -312,130 +340,160 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        Linux问题集
-        <small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/linux-collection/linux-problem-four.html" itemprop="url">
-              
-                <span itemprop="name">关于登录Linux出现 bash4.2$ 的问题</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-20T16:54:57+08:00"
-              content="2017-05-20" >
-          05-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/linux/vim-problem-two.html" itemprop="url">
-              
-                <span itemprop="name">解决linux：vim的退格删除键不能用</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-20T16:53:31+08:00"
-              content="2017-05-20" >
-          05-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/linux-collection/linux-problem-one.html" itemprop="url">
-              
-                <span itemprop="name">解决：sudo useradd xxx`时，出现`xxx is not in the sudoers file. This incident will be reported.</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-20T16:53:16+08:00"
-              content="2017-05-20" >
-          05-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/linux-collection/linux-problem-three.html" itemprop="url">
-              
-                <span itemprop="name">解决Centos7初次开机提示Initial setup of CentOS Linux 7 (core)</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-20T16:52:02+08:00"
-              content="2017-05-20" >
-          05-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                关于登录Linux出现 bash4.2$ 的问题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-20T16:54:57+08:00" content="2017-05-20">
+              2017-05-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux-Problem/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux Problem</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>创建用户时出现<code>bash-4.2$</code></p>
+<h3 id="如图所示"><a href="#如图所示" class="headerlink" title="如图所示"></a>如图所示</h3><p><img src="http://i.imgur.com/jW7CWxs.png" alt=""></p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p><img src="http://i.imgur.com/CotossG.png" alt=""></p>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>通过<code>useradd</code>方式创建新用户时，都会将所有的配置文件从<code>/etc/skel</code>到<code>/home</code>目录的新用户录下。但现在没有创建默认的文件。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ul>
+<li>root远程登录</li>
+<li>手动创建xiangcl的家目录<pre><code>`# mkdir /home/xiangcl
+# chown xiangcl:xiangcl /home/xiangcl
+# chmod 700 /home/xiangcl`
+</code></pre></li>
+<li>将<code>/etc/skel</code>这个目录的文件复制到<code>/home/xiangcl</code>中<pre><code>` # cd /etc/skel/
+ # ls -a
+ . ..  .bash_logout  .bash_profile .bashrc  .mozilla
+ # cp .bash_logout  /home/xiangcl/
+ # cp .bash_profile  /home/xiangcl/
+ # cp .bashrc  /home/xiangcl`
+</code></pre></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+            <a href="/tags/Linux问题集/" rel="tag">#Linux问题集</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/linux/vim-problem-two.html" rel="next" title="解决linux：vim的退格删除键不能用">
+                <i class="fa fa-chevron-left"></i> 解决linux：vim的退格删除键不能用
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -443,6 +501,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -462,8 +524,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/touxiang.jpg"
@@ -554,6 +625,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如图所示"><span class="nav-number">1.1.</span> <span class="nav-text">如图所示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题分析"><span class="nav-number">3.</span> <span class="nav-text">问题分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">4.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -650,6 +732,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 

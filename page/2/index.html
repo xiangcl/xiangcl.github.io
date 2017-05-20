@@ -949,8 +949,8 @@ absolute：设定元素
             
               
                 
-                <a class="post-title-link" href="/linux-collection/linux-answer-three.html" itemprop="url">
-                  解决Centos7初次开机提示Initial setup of CentOS Linux 7 (core)
+                <a class="post-title-link" href="/Linux/linux-file-dir-man-two.html" itemprop="url">
+                  Linux文件与目录管理2
                 </a>
               
             
@@ -977,8 +977,8 @@ absolute：设定元素
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux问题宝典/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux问题宝典</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -1012,13 +1012,12 @@ absolute：设定元素
       
         
           
-          安装完成centos7后出现如下提示：Initial setup of CentOS Linux 7 (core)
-1) [x] Creat user 2) [!] License information
-(no user will be created) (license not accepted
+          文件和目录的默认权限与隐藏权限文件默认权限： umaskumask：指定目前使用者在创建文件或目录时的权限默认值。
+1234567891011[xiangcl@centos-rpi3 ~]$ umask0002                                # 与一般权限有关是后三位
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/linux-collection/linux-answer-three.html" rel="contents">
+            <a class="btn" href="/Linux/linux-file-dir-man-two.html" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1069,8 +1068,8 @@ absolute：设定元素
             
               
                 
-                <a class="post-title-link" href="/linux/vim-problem-one.html" itemprop="url">
-                  解决linux：vim的退格删除键不能用
+                <a class="post-title-link" href="/tool-config/yum-centos-package-tool.html" itemprop="url">
+                  yum:CentOS包管理工具
                 </a>
               
             
@@ -1097,8 +1096,8 @@ absolute：设定元素
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux问题宝典/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux问题宝典</span>
+                  <a href="/categories/工具配置/" itemprop="url" rel="index">
+                    <span itemprop="name">工具配置</span>
                   </a>
                 </span>
 
@@ -1132,14 +1131,27 @@ absolute：设定元素
       
         
           
-          问题：linux下vim的退格删除键不能使用解决方案:~/.vimrc中加入set backspace=indent,eol,start即可，测试时需要注销重新登录
-或者进入vim后执行:set backspace=indent,eol,start可直接生效
+          ##Linux系统的包管理工具
+优点1.自动处理依赖性关系
+2.简化安装过程
+包管理器的分类
+CentOS
+yum
 
-摘自:http://blog.zhuk
+
+Ubuntu
+apt
+
+
+
+yum语法yum [options] [command] [package ...]
+options-h：显示帮助信息；
+-e 静默执行 
+-t 忽略错
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/linux/vim-problem-one.html" rel="contents">
+            <a class="btn" href="/tool-config/yum-centos-package-tool.html" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

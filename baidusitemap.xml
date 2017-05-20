@@ -3,6 +3,94 @@
 
 
     
+  <url>
+    <loc>http://xiangcl.com/linux-collection/linux-problem-four.html</loc>
+    <lastmod>2017-05-20T08:54:57.598Z</lastmod>
+    <data>
+        <display>
+        <title>关于登录Linux出现 bash4.2$ 的问题</title>
+        <pubTime>2017-05-20T08:54:57.626Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Linux问题集</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux Problem" url="http://xiangcl.com/categories/Linux-Problem/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiangcl.com/linux/vim-problem-two.html</loc>
+    <lastmod>2017-05-20T08:53:31.531Z</lastmod>
+    <data>
+        <display>
+        <title>解决linux：vim的退格删除键不能用</title>
+        <pubTime>2017-05-20T08:53:31.555Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Linux问题集</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux Problem" url="http://xiangcl.com/categories/Linux-Problem/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiangcl.com/linux-collection/linux-problem-one.html</loc>
+    <lastmod>2017-05-20T08:53:16.716Z</lastmod>
+    <data>
+        <display>
+        <title>解决：sudo useradd xxx`时，出现`xxx is not in the sudoers file. This incident will be reported.</title>
+        <pubTime>2017-05-20T08:53:16.732Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Linux问题集</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux Problem" url="http://xiangcl.com/categories/Linux-Problem/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiangcl.com/linux-collection/linux-problem-three.html</loc>
+    <lastmod>2017-05-20T08:52:02.240Z</lastmod>
+    <data>
+        <display>
+        <title>解决Centos7初次开机提示Initial setup of CentOS Linux 7 (core)</title>
+        <pubTime>2017-05-20T08:52:02.260Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Linux问题集</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux Problem" url="http://xiangcl.com/categories/Linux-Problem/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://xiangcl.com/web-front-end/html-css-location.html</loc>
@@ -20,96 +108,6 @@
            
              
               <breadCrumb title="Web前端" url="http://xiangcl.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xiangcl.com/Linux/linux-file-dir-man-one.html</loc>
-    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
-    <data>
-        <display>
-        <title>Linux文件与目录管理1</title>
-        <pubTime>2017-05-18T09:02:42.514Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>Linux基础</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://xiangcl.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xiangcl.com/Linux/linux-file-dir-man-two.html</loc>
-    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
-    <data>
-        <display>
-        <title>Linux文件与目录管理2</title>
-        <pubTime>2017-05-18T09:02:42.514Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>Linux基础</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://xiangcl.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xiangcl.com/tool-config/yum-centos-package-tool.html</loc>
-    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
-    <data>
-        <display>
-        <title>yum:CentOS包管理工具</title>
-        <pubTime>2017-05-18T09:02:42.514Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>yum</tag>
-         
-        <tag>CentOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="工具配置" url="http://xiangcl.com/categories/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xiangcl.com/seo/simple-seo-optimization.html</loc>
-    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
-    <data>
-        <display>
-        <title>SEO的简单优化</title>
-        <pubTime>2017-05-18T09:02:42.514Z</pubTime>
-        
-        <tag>SEO</tag>
-         
-        <tag>网站优化</tag>
-         
-         
-           
-             
-              <breadCrumb title="SEO" url="http://xiangcl.com/categories/SEO/"/>
           
         </display>
     </data>
@@ -160,27 +158,6 @@
     </url>
 
     
-  <url>
-    <loc>http://xiangcl.com/linux-collection/linux-answer-two.html</loc>
-    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
-    <data>
-        <display>
-        <title>关于登录Linux出现 bash4.2$ 的问题</title>
-        <pubTime>2017-05-18T09:02:42.514Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>Linux问题集</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux问题宝典" url="http://xiangcl.com/categories/Linux%E9%97%AE%E9%A2%98%E5%AE%9D%E5%85%B8/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://xiangcl.com/linux/chart-linux-os.html</loc>
@@ -298,21 +275,21 @@
 
     
   <url>
-    <loc>http://xiangcl.com/linux-collection/linux-answer-three.html</loc>
+    <loc>http://xiangcl.com/Linux/linux-file-dir-man-one.html</loc>
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     <data>
         <display>
-        <title>解决Centos7初次开机提示Initial setup of CentOS Linux 7 (core)</title>
+        <title>Linux文件与目录管理1</title>
         <pubTime>2017-05-18T09:02:42.514Z</pubTime>
         
         <tag>Linux</tag>
          
-        <tag>Linux问题集</tag>
+        <tag>Linux基础</tag>
          
          
            
              
-              <breadCrumb title="Linux问题宝典" url="http://xiangcl.com/categories/Linux%E9%97%AE%E9%A2%98%E5%AE%9D%E5%85%B8/"/>
+              <breadCrumb title="Linux" url="http://xiangcl.com/categories/Linux/"/>
           
         </display>
     </data>
@@ -320,21 +297,21 @@
 
     
   <url>
-    <loc>http://xiangcl.com/linux/vim-problem-one.html</loc>
+    <loc>http://xiangcl.com/Linux/linux-file-dir-man-two.html</loc>
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     <data>
         <display>
-        <title>解决linux：vim的退格删除键不能用</title>
+        <title>Linux文件与目录管理2</title>
         <pubTime>2017-05-18T09:02:42.514Z</pubTime>
         
         <tag>Linux</tag>
          
-        <tag>Linux问题集</tag>
+        <tag>Linux基础</tag>
          
          
            
              
-              <breadCrumb title="Linux问题宝典" url="http://xiangcl.com/categories/Linux%E9%97%AE%E9%A2%98%E5%AE%9D%E5%85%B8/"/>
+              <breadCrumb title="Linux" url="http://xiangcl.com/categories/Linux/"/>
           
         </display>
     </data>
@@ -342,21 +319,23 @@
 
     
   <url>
-    <loc>http://xiangcl.com/linux-collection/linux-answer-one.html</loc>
+    <loc>http://xiangcl.com/tool-config/yum-centos-package-tool.html</loc>
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     <data>
         <display>
-        <title>解决：sudo useradd xxx`时，出现`xxx is not in the sudoers file. This incident will be reported.</title>
+        <title>yum:CentOS包管理工具</title>
         <pubTime>2017-05-18T09:02:42.514Z</pubTime>
         
         <tag>Linux</tag>
          
-        <tag>Linux问题集</tag>
+        <tag>yum</tag>
+         
+        <tag>CentOS</tag>
          
          
            
              
-              <breadCrumb title="Linux问题宝典" url="http://xiangcl.com/categories/Linux%E9%97%AE%E9%A2%98%E5%AE%9D%E5%85%B8/"/>
+              <breadCrumb title="工具配置" url="http://xiangcl.com/categories/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/"/>
           
         </display>
     </data>
@@ -385,6 +364,27 @@
     </url>
 
     
+  <url>
+    <loc>http://xiangcl.com/seo/simple-seo-optimization.html</loc>
+    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
+    <data>
+        <display>
+        <title>SEO的简单优化</title>
+        <pubTime>2017-05-18T09:02:42.514Z</pubTime>
+        
+        <tag>SEO</tag>
+         
+        <tag>网站优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="SEO" url="http://xiangcl.com/categories/SEO/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
     
   <url>

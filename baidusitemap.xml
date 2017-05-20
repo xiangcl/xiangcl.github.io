@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://xiangcl.com/linux-collection/linux-problem-fives.html</loc>
+    <lastmod>2017-05-20T09:16:08.427Z</lastmod>
+    <data>
+        <display>
+        <title>五：CentOS7安装出现Warning</title>
+        <pubTime>2017-05-20T09:16:08.427Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Linux问题集</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux Problem" url="http://xiangcl.com/categories/Linux-Problem/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiangcl.com/tool-config/GitHub_Uses.html</loc>
+    <lastmod>2017-05-20T09:16:08.427Z</lastmod>
+    <data>
+        <display>
+        <title>GitHub使用基本流程</title>
+        <pubTime>2017-05-20T09:16:08.427Z</pubTime>
+        
+        <tag>GitHub</tag>
+         
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具配置" url="http://xiangcl.com/categories/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xiangcl.com/linux-collection/linux-problem-four.html</loc>
     <lastmod>2017-05-20T08:54:57.598Z</lastmod>
     <data>
@@ -93,21 +137,21 @@
     
     
   <url>
-    <loc>http://xiangcl.com/web-front-end/html-css-location.html</loc>
+    <loc>http://xiangcl.com/seo/simple-seo-optimization.html</loc>
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     <data>
         <display>
-        <title>html+css定位相关知识点</title>
+        <title>SEO的简单优化</title>
         <pubTime>2017-05-18T09:02:42.514Z</pubTime>
         
-        <tag>Web前端</tag>
+        <tag>SEO</tag>
          
-        <tag>html+css</tag>
+        <tag>网站优化</tag>
          
          
            
              
-              <breadCrumb title="Web前端" url="http://xiangcl.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="SEO" url="http://xiangcl.com/categories/SEO/"/>
           
         </display>
     </data>
@@ -144,9 +188,9 @@
         <title>了解Git</title>
         <pubTime>2017-05-18T09:02:42.514Z</pubTime>
         
-        <tag>工具使用</tag>
-         
         <tag>Git</tag>
+         
+        <tag>工具使用</tag>
          
          
            
@@ -183,12 +227,13 @@
     </url>
 
     
+    
   <url>
-    <loc>http://xiangcl.com/web-front-end/image-elements-center.html</loc>
+    <loc>http://xiangcl.com/web-front-end/html-css-location.html</loc>
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     <data>
         <display>
-        <title>如何把图片放在一个元素的上下居中？</title>
+        <title>html+css定位相关知识点</title>
         <pubTime>2017-05-18T09:02:42.514Z</pubTime>
         
         <tag>Web前端</tag>
@@ -204,7 +249,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://xiangcl.com/tool-config/hexo-blog-build.html</loc>
@@ -274,6 +318,7 @@
     </url>
 
     
+    
   <url>
     <loc>http://xiangcl.com/Linux/linux-file-dir-man-one.html</loc>
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
@@ -319,6 +364,28 @@
 
     
   <url>
+    <loc>http://xiangcl.com/linux/linux-user-groups.html</loc>
+    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
+    <data>
+        <display>
+        <title>详解Linux用户和组的权限管理及相关命令</title>
+        <pubTime>2017-05-18T09:02:42.514Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Linux基础</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://xiangcl.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xiangcl.com/tool-config/yum-centos-package-tool.html</loc>
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     <data>
@@ -343,49 +410,26 @@
 
     
   <url>
-    <loc>http://xiangcl.com/linux/linux-user-groups.html</loc>
+    <loc>http://xiangcl.com/web-front-end/image-elements-center.html</loc>
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     <data>
         <display>
-        <title>详解Linux用户和组的权限管理及相关命令</title>
+        <title>如何把图片放在一个元素的上下居中？</title>
         <pubTime>2017-05-18T09:02:42.514Z</pubTime>
         
-        <tag>Linux</tag>
+        <tag>Web前端</tag>
          
-        <tag>Linux基础</tag>
+        <tag>html+css</tag>
          
          
            
              
-              <breadCrumb title="Linux" url="http://xiangcl.com/categories/Linux/"/>
+              <breadCrumb title="Web前端" url="http://xiangcl.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
     </url>
 
-    
-  <url>
-    <loc>http://xiangcl.com/seo/simple-seo-optimization.html</loc>
-    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
-    <data>
-        <display>
-        <title>SEO的简单优化</title>
-        <pubTime>2017-05-18T09:02:42.514Z</pubTime>
-        
-        <tag>SEO</tag>
-         
-        <tag>网站优化</tag>
-         
-         
-           
-             
-              <breadCrumb title="SEO" url="http://xiangcl.com/categories/SEO/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
     
   <url>
     <loc>http://xiangcl.com/linux/linux-database-backup.html</loc>

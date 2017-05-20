@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiangcl.com/"/>
-  <updated>2017-05-20T08:54:57.598Z</updated>
+  <updated>2017-05-20T09:16:08.427Z</updated>
   <id>http://xiangcl.com/</id>
   
   <author>
@@ -14,6 +14,277 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>五：CentOS7安装出现Warning</title>
+    <link href="http://xiangcl.com/linux-collection/linux-problem-fives.html"/>
+    <id>http://xiangcl.com/linux-collection/linux-problem-fives.html</id>
+    <published>2017-05-20T09:16:08.427Z</published>
+    <updated>2017-05-20T09:16:08.427Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="U盘安装CentOS-7提示-“Warning-dev-root-does-not-exist-could-not-boot”-解决办法"><a href="#U盘安装CentOS-7提示-“Warning-dev-root-does-not-exist-could-not-boot”-解决办法" class="headerlink" title="U盘安装CentOS 7提示 “Warning: /dev/root does not exist, could not boot” 解决办法"></a>U盘安装CentOS 7提示 “Warning: /dev/root does not exist, could not boot” 解决办法</h2><p>想将旧电脑安装CentOS7系统以作学习之用，奈何安装时出现错误，错误图示如下：</p>
+<p><img src="http://oq7f5bj6k.bkt.clouddn.com/img1.jpg" alt=""></p>
+<p><img src="http://oq7f5bj6k.bkt.clouddn.com/img2.jpg" alt=""></p>
+<p>经多方查找、分析得知可能是启动引导不正确。</p>
+<ul>
+<li><p>用<code>usb writer</code>重新制作了系统盘。</p>
+</li>
+<li><p>制作完成后将U盘名称改为CENTOS</p>
+</li>
+<li><p>进入安装界面时按<code>e</code>键，将CENTOS\x207\x20x86_64″改成 “centos”。然后<code>Ctrl+x</code>进入安装。</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;U盘安装CentOS-7提示-“Warning-dev-root-does-not-exist-could-not-boot”-解决办法&quot;&gt;&lt;a href=&quot;#U盘安装CentOS-7提示-“Warning-dev-root-does-not-exist-coul
+    
+    </summary>
+    
+      <category term="Linux Problem" scheme="http://xiangcl.com/categories/Linux-Problem/"/>
+    
+    
+      <category term="Linux" scheme="http://xiangcl.com/tags/Linux/"/>
+    
+      <category term="Linux问题集" scheme="http://xiangcl.com/tags/Linux%E9%97%AE%E9%A2%98%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub使用基本流程</title>
+    <link href="http://xiangcl.com/tool-config/GitHub_Uses.html"/>
+    <id>http://xiangcl.com/tool-config/GitHub_Uses.html</id>
+    <published>2017-05-20T09:16:08.427Z</published>
+    <updated>2017-05-20T09:16:08.427Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="初始化git"><a href="#初始化git" class="headerlink" title="初始化git"></a>初始化git</h1><h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><ul>
+<li>使用Git的第一件事就是设置你的名字和email,这些就是你在提交commit时的签名，每次提交记录里都会包含这些信息。使用git config命令进行配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@bogon ~]# git config --global user.name &quot;xiangcl&quot;</div><div class="line">[root@bogon ~]# git config --global user.email &quot;xiangcl_cs@qq.com&quot;</div></pre></td></tr></table></figure>
+<ul>
+<li>执行了上面的命令后,会在家目录(<code>/root</code>)下建立一个叫<code>.gitconfig</code>的文件（该文件为隐藏文件，需要使用<code>ls -al</code>查看到）. 内容一般像下面这样，可以使用vim或cat查看文件内容:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@bogon ~]# cat .gitconfig</div><div class="line">[user]</div><div class="line">name = xiangcl</div><div class="line">email = xiangcl_cs@qq.com</div></pre></td></tr></table></figure>
+<ul>
+<li><p>上面的配置文件就是Git全局配置的文件，一般配置方法是<code>git config --global &lt;配置名称&gt; &lt;配置的值&gt;</code>。</p>
+</li>
+<li><p>如果你想使项目里的某个值与前面的全局设置有区别(例如把私人邮箱地址改为工作邮箱)，你可以在项目中使用<code>git config</code>命令不带<code>--global</code>选项来设置. 这会在你当前的项目目录下创建<code>.git/config</code>，从而使用针对当前项目的配置。</p>
+</li>
+</ul>
+<h1 id="配置GitHub"><a href="#配置GitHub" class="headerlink" title="配置GitHub"></a>配置GitHub</h1><h2 id="注册GitHub"><a href="#注册GitHub" class="headerlink" title="注册GitHub"></a>注册GitHub</h2><p>后续有时间另写一篇教程，这里不在赘述…</p>
+<h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><ul>
+<li>在本地创建ssh key：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">ubuntu@VM-0-26-ubuntu:~$ sudo ssh-keygen -t rsa -C &quot;xiangcl_cs@qq.com&quot;</div><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file in which to save the key (/root/.ssh/id_rsa):</div><div class="line">Created directory &apos;/root/.ssh&apos;.</div><div class="line">Enter passphrase (empty for no passphrase):</div><div class="line">Enter same passphrase again:</div><div class="line">Your identification has been saved in /root/.ssh/id_rsa.</div><div class="line">Your public key has been saved in /root/.ssh/id_rsa.pub.</div><div class="line">The key fingerprint is:</div><div class="line">SHA256:Ia1lou/M0ZNnLW6Dly9+Ws1kX89Uq5eF9wUBgFGChDA xiangcl_cs@qq.com</div><div class="line">The key&apos;s randomart image is:</div><div class="line">+---[RSA 2048]----+</div><div class="line">|  E. o..o+o....  |</div><div class="line">|   .. ....     . |</div><div class="line">|      o =     . .|</div><div class="line">|     . * .     oo|</div><div class="line">|    . . S     +.*|</div><div class="line">|     . . . . =.=B|</div><div class="line">|      o +.+.o.oo=|</div><div class="line">|     + ..=*o. .  |</div><div class="line">|      +  ++*.    |</div><div class="line">+----[SHA256]-----+</div></pre></td></tr></table></figure>
+<p>显示如上则表示创建成功。注意，上面命令中的邮箱<code>&quot;xiangcl_cs@qq.com&quot;</code>请更换为自己的邮箱，后面密钥设置密码，这里我无需设置，直接一路回车就行。</p>
+<ul>
+<li>设置成功会在 <code>/root/</code> 下生成一个<code>.ssh</code>文件，因为要进入 <code>/root</code> 目录，所以需要转为root身份：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ubuntu@VM-0-26-ubuntu:~$ sudo -s</div><div class="line">root@VM-0-26-ubuntu:~# cd /root</div><div class="line">root@VM-0-26-ubuntu:/root# cd .ssh/</div><div class="line">root@VM-0-26-ubuntu:/root/.ssh# ls -l</div><div class="line">total 8</div><div class="line">-rw------- 1 root root 1675 May 18 16:14 id_rsa</div><div class="line">-rw-r--r-- 1 root root  399 May 18 16:14 id_rsa.pub</div></pre></td></tr></table></figure>
+<ul>
+<li>打开<code>id_rsa.pub</code>,复制里面的<code>key</code></li>
+<li>然后粘贴至<code>GitHub，Settings/SSH and GPG keys/New SSH key</code></li>
+<li>使用 <code>ssh -T git@github.com</code> 验证是否安装成功</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">root@VM-0-26-ubuntu:~# ssh -T git@github.com</div><div class="line">The authenticity of host &apos;github.com (192.30.253.112)&apos; can&apos;t be established.</div><div class="line">RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</div><div class="line">Are you sure you want to continue connecting (yes/no)? yes</div><div class="line">Warning: Permanently added &apos;github.com,192.30.253.112&apos; (RSA) to the list of known hosts.</div><div class="line">Hi xiangcl! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
+<p>按提示输入yes，看到You’ve successfully authenticated, but GitHub does not provide shell access则表示连接成功。</p>
+<h1 id="获取一个Git仓库"><a href="#获取一个Git仓库" class="headerlink" title="获取一个Git仓库"></a>获取一个Git仓库</h1><p>既然我们现在把一切都设置好了，那么我们需要一个Git仓库。有两种方法可以得到它：一种是从已有的Git仓库中clone (克隆，复制)；还有一种是新建一个仓库，把未进行版本控制的文件进行版本控制。</p>
+<h2 id="Clone一个仓库"><a href="#Clone一个仓库" class="headerlink" title="Clone一个仓库"></a>Clone一个仓库</h2><ul>
+<li><p>为了得一个项目的拷贝(copy),我们需要知道这个项目仓库的地址(Git URL). Git能在许多协议下使用，所以Git URL可能以<code>ssh://, http(s)://, git://</code>. 有些仓库可以通过不只一种协议来访问。</p>
+</li>
+<li><p>这里在我的GitHub上提供的一个名字为GitTest的仓库供大家测试的公有仓库，这个仓库可以使用下面方式进行clone：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[root@bogon ~]# git clone https://github.com/xiangcl/GitTest.git</div><div class="line">正克隆到 &apos;GitTest&apos;...</div><div class="line">remote: Counting objects: 6, done.</div><div class="line">remote: Compressing objects: 100% (5/5), done.</div><div class="line">remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0</div><div class="line">Unpacking objects: 100% (6/6), done.</div></pre></td></tr></table></figure>
+<ul>
+<li>clone操作完成后，会发现当前目录下多了一个GitTest的文件夹，这个文件夹里的内容就是我们刚刚clone下来的代码。由于当前<code>GitTest</code>仅是测试项目，里面仅有README.md和LICENSE文件。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@bogon ~]# cd GitTest/</div><div class="line">[root@bogon GitTest]# ls</div><div class="line">LICENSE  README.md</div></pre></td></tr></table></figure>
+<h2 id="初始化一个新仓库"><a href="#初始化一个新仓库" class="headerlink" title="初始化一个新仓库"></a>初始化一个新仓库</h2><p>可以对一个已存在的文件夹用下面的命令让它置于Git的版本控制管理之下。</p>
+<ul>
+<li>创建代码目录project：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@bogon gitproject]# cd ~</div><div class="line"></div><div class="line">[root@bogon ~]# mkdir project</div></pre></td></tr></table></figure>
+<ul>
+<li>进入到代码目录，创建并初始化Git仓库：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@bogon ~]# cd project/</div><div class="line"></div><div class="line">[root@bogon project]# git init</div><div class="line"></div><div class="line">初始化空的 Git 版本库于 /root/project/.git/</div></pre></td></tr></table></figure>
+<p>通过<code>ls -la</code>命令会发现<code>project</code>目录下会有一个名叫<code>.git</code>的目录被创建，这意味着一个仓库被初始化了。可以进入到<code>.git</code>目录查看下有哪些内容。</p>
+<h1 id="Git工作流程"><a href="#Git工作流程" class="headerlink" title="Git工作流程"></a>Git工作流程</h1><p>git基本工作流程如下：</p>
+<ol>
+<li>创建或修改文件</li>
+<li>使用<code>git add</code>命令添加新创建或修改的文件到本地的缓存区（Index）</li>
+<li>使用<code>git commit</code>命令提交到本地代码库</li>
+<li>（可选，有的时候并没有可以同步的远端代码库）使用<code>git push</code>命令将本地代码库同步到远端代码库</li>
+</ol>
+<ul>
+<li>进入我们刚才建立的project目录，分别创建文件<code>file1，file2，file3</code>：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@bogon ~]# cd project/</div><div class="line"></div><div class="line">[root@bogon project]# touch file1 file2 file3</div></pre></td></tr></table></figure>
+<ul>
+<li>修改文件，可以使用vim编辑内容，也可以直接echo添加测试内容。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# echo &quot;test&quot; &gt;&gt; file1</div><div class="line"></div><div class="line">[root@bogon project]# echo &quot;test&quot; &gt;&gt; file2</div><div class="line"></div><div class="line">[root@bogon project]# echo &quot;test&quot; &gt;&gt; file3</div></pre></td></tr></table></figure>
+<ul>
+<li>此时可以使用<code>git status</code>命令查看当前git仓库的状态：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git status</div><div class="line"></div><div class="line"># 位于分支 master</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># 初始提交</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># 未跟踪的文件:</div><div class="line"></div><div class="line"># （使用 &quot;git add &lt;file&gt;...&quot; 以包含要提交的内容）</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># file1</div><div class="line"></div><div class="line"># file2</div><div class="line"></div><div class="line"># file3</div><div class="line"></div><div class="line">提交为空，但是存在尚未跟踪的文件（使用 &quot;git add&quot; 建立跟踪）</div></pre></td></tr></table></figure>
+<p>可以发现，有三个文件处于未跟踪(untracked)状态，下一步我们就需要用<code>git add</code>命令将他们加入到缓存区（Index）。</p>
+<ul>
+<li>使用<code>git add</code>命令将新建的文件添加到：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git add file1 file2 file3</div></pre></td></tr></table></figure>
+<ul>
+<li>然后再次执行<code>git status</code>就会发现新的变化：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git status</div><div class="line"></div><div class="line"># 位于分支 master</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># 初始提交</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># 要提交的变更：</div><div class="line"></div><div class="line"># （使用 &quot;git rm --cached &lt;file&gt;...&quot; 撤出暂存区）</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># 新文件： file1</div><div class="line"></div><div class="line"># 新文件： file2</div><div class="line"></div><div class="line"># 新文件： file3</div><div class="line"></div><div class="line">#</div></pre></td></tr></table></figure>
+<ul>
+<li>你现在为commit做好了准备，你可以使用 <code>git diff</code> 命令再加上 –cached 参数，看看缓存区中哪些文件被修改了。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git diff --cached</div></pre></td></tr></table></figure>
+<p>如果没有<code>--cached</code>参数，<code>git diff</code> 会显示当前你所有已做的但没有加入到索引里的修改。</p>
+<p>如果你要做进一步的修改, 那就继续做, 做完后就把新修改的文件加入到缓存区中。</p>
+<ul>
+<li>当所有新建，修改的文件都被添加到了缓存区，我们就要使用<code>git commit</code>提交到本地仓库：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git commit -m &quot;add 3 files&quot;</div><div class="line"></div><div class="line">[master（根提交） bbb9a52] add 3 files</div><div class="line"></div><div class="line"> 3 files changed, 3 insertions(+)</div><div class="line"></div><div class="line"> create mode 100644 file1</div><div class="line"></div><div class="line"> create mode 100644 file2</div><div class="line"></div><div class="line"> create mode 100644 file3</div></pre></td></tr></table></figure>
+<p>需要使用<code>-m</code>添加本次修改的注释，完成后就会记录一个新的项目版本。</p>
+<ul>
+<li>除了用<code>git add</code>命令，我们还可以用下面的命令将所有没有加到缓存区的修改也一起提交，但-a命令不会添加新建的文件。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git commit -a -m &quot;add 3 files&quot;</div></pre></td></tr></table></figure>
+<p>再次输入<code>git status</code>查看状态，会发现当前的代码库已经没有待提交的文件了，缓存区已经被清空。</p>
+<p>至此，我们完成了第一次代码提交，这次提交的代码中我们创建了三个新文件。需要注意的是如果是修改文件，也需要使用<code>git add</code>命令添加到缓存区才可以提交。如果是删除文件，则直接使用<code>git rm</code>命令删除后会自动将已删除文件的信息添加到缓存区，<code>git commit</code>提交后就会将本地仓库中的对应文件删除。</p>
+<h3 id="为你的项目添加一个新的远程仓库"><a href="#为你的项目添加一个新的远程仓库" class="headerlink" title="为你的项目添加一个新的远程仓库"></a>为你的项目添加一个新的远程仓库</h3><p>本地仓库是创建完成了，现在需要与远程的仓库进行链接。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git remote</div><div class="line">[root@bogon project]# git remote add origin git@github.com:xiangcl/project.git</div><div class="line">[root@bogon project]# git remote -v</div><div class="line">origin	git@github.com:xiangcl/project.git (fetch)</div><div class="line">origin	git@github.com:xiangcl/project.git (push)</div></pre></td></tr></table></figure></p>
+<h3 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h3><p>这个时候如果本地的仓库连接到了远程Git服务器，可以使用下面的命令将本地仓库同步到远端服务器：(注意，需要与远程仓库连接)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git push -u origin master</div><div class="line">Warning: Permanently added the RSA host key for IP address &apos;192.30.255.113&apos; to the list of known hosts.</div><div class="line">Counting objects: 14, done.</div><div class="line">Delta compression using up to 4 threads.</div><div class="line">Compressing objects: 100% (10/10), done.</div><div class="line">Writing objects: 100% (14/14), 1.16 KiB | 0 bytes/s, done.</div><div class="line">Total 14 (delta 2), reused 0 (delta 0)</div><div class="line">remote: Resolving deltas: 100% (2/2), done.</div><div class="line">To git@github.com:xiangcl/project.git</div><div class="line"> * [new branch]      master -&gt; master</div><div class="line">分支 master 设置为跟踪来自 origin 的远程分支 master。</div></pre></td></tr></table></figure>
+<p>上面使用<code>git push</code>时带上了<code>-u</code>参数，是将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。</p>
+<h3 id="从远端仓库下载新分支与数据"><a href="#从远端仓库下载新分支与数据" class="headerlink" title="从远端仓库下载新分支与数据"></a>从远端仓库下载新分支与数据</h3><ul>
+<li><code>git fetch</code>会访问远程仓库，从中拉取所有你还没有的数据。 执行完成后，你将会拥有那个远程仓库中所有分支的引用，可以随时合并或查看。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git remote -v</div><div class="line">origin	git@github.com:xiangcl/project.git (fetch)</div><div class="line">origin	git@github.com:xiangcl/project.git (push)</div><div class="line">[root@bogon project]# git fetch origin </div><div class="line">remote: Counting objects: 3, done.</div><div class="line">remote: Compressing objects: 100% (2/2), done.</div><div class="line">remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</div><div class="line">Unpacking objects: 100% (3/3), done.</div><div class="line">来自 github.com:xiangcl/project</div><div class="line">   6c3b072..4d38d99  master     -&gt; origin/master</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>git fetch origin</code>会抓取从你上次克隆以来别人上传到此远程仓库中的所有更新（或是上次 fetch 以来别人提交的更新）。有一点很重要，需要记住，fetch 命令只是将远端的数据拉到本地仓库，并不自动合并到当前工作分支，只有当你确实准备好了，才能手工合并。</p>
+<ul>
+<li>查看分支<br>git branch命令的-r选项，可以用来查看远程分支，-a选项查看所有分支。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git branch -r </div><div class="line">  origin/master</div><div class="line"></div><div class="line">[root@bogon project]# git branch -a</div><div class="line">* master</div><div class="line">  remotes/origin/master</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>上面命令表示，本地主机的当前分支是master，远程分支是origin/master。</p>
+<ul>
+<li>取回远程主机的更新以后，可以在它的基础上，使用<code>git checkout</code>命令创建一个新的分支。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git checkout -b newBrack origin/master </div><div class="line">分支 newBrack 设置为跟踪来自 origin 的远程分支 master。</div><div class="line">切换到一个新分支 &apos;newBrack&apos;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>上面命令表示，在origin/master的基础上，创建一个新分支。</p>
+<ul>
+<li>此外，也可以使用<code>git merge</code>命令或者<code>git rebase</code>命令，在本地分支上合并远程分支。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git merge origin/master </div><div class="line">Already up-to-date.</div><div class="line"></div><div class="line">[root@bogon project]# ls</div><div class="line">file1  file2  file3  README.md</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>上面命令表示在当前分支上，合并origin/master。此时使用<code>ls</code>就可以查看到我刚刚在仓库段创建的README.md文件了</p>
+<h1 id="分支与合并"><a href="#分支与合并" class="headerlink" title="分支与合并"></a>分支与合并</h1><p>Git的分支可以让你在主线（master分支）之外进行代码提交，同时又不会影响代码库主线。分支的作用体现在多人协作开发中，比如一个团队开发软件，你负责独立的一个功能需要一个月的时间来完成，你就可以创建一个分支，只把该功能的代码提交到这个分支，而其他同事仍然可以继续使用主线开发，你每天的提交不会对他们造成任何影响。当你完成功能后，测试通过再把你的功能分支合并到主线。</p>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><ul>
+<li>一个Git仓库可以维护很多开发分支。现在我们来创建一个新的叫 experimental的分支：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git branch experimental</div></pre></td></tr></table></figure>
+<ul>
+<li>运行git branch命令可以查看当前的分支列表，已经目前的开发环境处在哪个分支上：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git branch</div><div class="line">  experimental</div><div class="line">* master</div></pre></td></tr></table></figure>
+<ul>
+<li>experimental 分支是你刚才创建的，master分支是Git系统默认创建的主分支。星号标识了你当工作在哪个分支下，输入git checkout 分支名可以切换到其他分支：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git checkout experimental</div><div class="line">切换到分支 &apos;experimental&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li>切换到experimental分支，切换完成后，先编辑里面的一个文件，再提交(commit)改动，最后切换回 “master”分支：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# echo &quot;update&quot; &gt;&gt; file1 # 修改file1文件</div><div class="line">[root@bogon project]# git status # 使用 git status 查看当前状态</div><div class="line"># 位于分支 experimental</div><div class="line"># 尚未暂存以备提交的变更：</div><div class="line"># （使用 &quot;git add &lt;file&gt;...&quot; 更新要提交的内容）</div><div class="line"># （使用 &quot;git checkout -- &lt;file&gt;...&quot; 丢弃工作区的改动）</div><div class="line">#</div><div class="line"># 修改： file1</div><div class="line">#</div><div class="line">修改尚未加入提交（使用 &quot;git add&quot; 和/或 &quot;git commit -a&quot;）</div><div class="line">[root@bogon project]# git add file1 # 添加并提交file1的更改</div><div class="line">[root@bogon project]# git commit -m &quot;update file1&quot;</div><div class="line">[experimental 3251fbe] update file1</div><div class="line"> 1 file changed, 1 insertion(+)</div><div class="line">[root@bogon project]# cat file1 #查看file1文件的内容</div><div class="line">test</div><div class="line">update</div><div class="line">[root@bogon project]# git checkout master #切换至master分支</div><div class="line"></div><div class="line">切换到分支 &apos;master&apos;</div></pre></td></tr></table></figure>
+<p>查看下file1中的内容会发现刚才做的修改已经看不到了。因为刚才的修改时在experimental分支下，现在切换回了master分支，目录下的文件都是master分支上的文件了。</p>
+<ul>
+<li>现在可以在master分支下再作一些不同的修改:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# echo &apos;update again&apos; &gt;&gt; file2 #修改file2文件</div><div class="line"></div><div class="line">[root@bogon project]# git status #查看当前状态</div><div class="line"></div><div class="line"># 位于分支 master</div><div class="line"></div><div class="line"># 尚未暂存以备提交的变更：</div><div class="line"></div><div class="line"># （使用 &quot;git add &lt;file&gt;...&quot; 更新要提交的内容）</div><div class="line"></div><div class="line"># （使用 &quot;git checkout -- &lt;file&gt;...&quot; 丢弃工作区的改动）</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># 修改： file2</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line">修改尚未加入提交（使用 &quot;git add&quot; 和/或 &quot;git commit -a&quot;）</div><div class="line"></div><div class="line">[root@bogon project]# git add file2 #添加并调教file2的修改</div><div class="line"></div><div class="line">[root@bogon project]# git commit -m &quot;update file2 on master&quot;</div><div class="line"></div><div class="line">[master 7f50340] update file2 on master</div><div class="line"></div><div class="line"> 1 file changed, 1 insertion(+)</div><div class="line"></div><div class="line">[root@bogon project]# cat file2 #查看file2的修改</div><div class="line"></div><div class="line">test</div><div class="line"></div><div class="line">update again</div></pre></td></tr></table></figure>
+<p>这时，两个分支就有了各自不同的修改，分支的内容都已经不同，如何将多个分支进行合并呢？</p>
+<ul>
+<li>可以通过下面的git merge命令来合并experimental到主线分支master:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git checkout master # 切换至master 分支</div><div class="line"></div><div class="line">已经位于 &apos;master&apos;</div><div class="line"></div><div class="line">[root@bogon project]# git merge -m &quot;merge experimental branch&quot; experimental #将 experimental 分支合并至master分区</div><div class="line"></div><div class="line">Merge made by the &apos;recursive&apos; strategy.</div><div class="line"></div><div class="line"> file1 | 1 +</div><div class="line"></div><div class="line"> 1 file changed, 1 insertion(+)</div></pre></td></tr></table></figure>
+<p>-m参数仍然是需要填写合并的注释信息。</p>
+<p>由于两个branch修改了两个不同的文件，所以合并时不会有冲突，执行上面的命令后合并就完成了。</p>
+<ul>
+<li>如果有冲突，比如两个分支都改了一个文件file3，则合并时会失败。首先我们在master分支上修改file3文件并提交：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git checkout master # 切换至 master 分区</div><div class="line"></div><div class="line">已经位于 &apos;master&apos;</div><div class="line"></div><div class="line">[root@bogon project]# echo &quot;master:update file3&quot; &gt;&gt; file3 # 修改 file3 文件</div><div class="line"></div><div class="line">[root@bogon project]# git status # 查看当前状态</div><div class="line"></div><div class="line"># 位于分支 master</div><div class="line"></div><div class="line"># 尚未暂存以备提交的变更：</div><div class="line"></div><div class="line"># （使用 &quot;git add &lt;file&gt;...&quot; 更新要提交的内容）</div><div class="line"></div><div class="line"># （使用 &quot;git checkout -- &lt;file&gt;...&quot; 丢弃工作区的改动）</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># 修改： file3</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line">修改尚未加入提交（使用 &quot;git add&quot; 和/或 &quot;git commit -a&quot;）</div><div class="line"></div><div class="line">[root@bogon project]# git commit -a -m &apos;update file3 on master&apos; #提交至master分区</div><div class="line"></div><div class="line">[master 2922456] update file3 on master</div><div class="line"></div><div class="line"> 1 file changed, 1 insertion(+)</div><div class="line"></div><div class="line">[root@bogon project]# git status #在次查看状态</div><div class="line"></div><div class="line"># 位于分支 master</div><div class="line"></div><div class="line">无文件要提交，干净的工作区</div></pre></td></tr></table></figure>
+<ul>
+<li>然后切换到experimental，修改file3并提交：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git checkout experimental # 切换至 experimental 分支</div><div class="line">切换到分支 &apos;experimental&apos;</div><div class="line">[root@bogon project]# echo &quot;experimental: update file3&quot; &gt;&gt; file3 # 修改 file3 文本</div><div class="line">[root@bogon project]# git commit -a -m &apos;update file3 on experimental&apos; # 提交至experimental 分支</div><div class="line">[experimental e511488] update file3 on experimental</div><div class="line"> 1 file changed, 1 insertion(+)</div></pre></td></tr></table></figure>
+<ul>
+<li>切换到master进行合并：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git checkout master # 切换至 master 分支</div><div class="line">切换到分支 &apos;master&apos;</div><div class="line">[root@bogon project]# git merge experimental # 合并分支</div><div class="line">自动合并 file3</div><div class="line">冲突（内容）：合并冲突于 file3</div><div class="line">自动合并失败，修正冲突然后提交修正的结果。</div></pre></td></tr></table></figure>
+<ul>
+<li>合并失败后先用git status查看状态，会发现file3显示为both modified，查看file3内容会发现：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git status #查看状态</div><div class="line"># 位于分支 master</div><div class="line"># 您有尚未合并的路径。</div><div class="line"># （解决冲突并运行 &quot;git commit&quot;）</div><div class="line">#</div><div class="line"># 未合并的路径：</div><div class="line"># （使用 &quot;git add &lt;file&gt;...&quot; 标记解决方案）</div><div class="line">#</div><div class="line"># 双方修改： file3</div><div class="line">#</div><div class="line">修改尚未加入提交（使用 &quot;git add&quot; 和/或 &quot;git commit -a&quot;）</div><div class="line">[root@bogon project]# cat file3 # 查看产生冲突的文件</div><div class="line">test</div><div class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</div><div class="line">master:update file3</div><div class="line">=======</div><div class="line">experimental: update file3</div><div class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; experimental</div></pre></td></tr></table></figure>
+<p>上面的内容也可以使用git diff查看，先前已经提到git diff不加参数可以显示未提交到缓存区中的修改内容。</p>
+<ul>
+<li>可以看到冲突的内容都被添加到了file3中，我们使用vim编辑这个文件，去掉git自动产生标志冲突的&lt;&lt;&lt;&lt;&lt;&lt;等符号后，根据需要只保留我们需要的内容后保存，然后使用git add file3和git commit命令来提交合并后的file3内容，这个过程是手动解决冲突的流程。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# vim file3 # 使用 vim 打开文件修改</div><div class="line"></div><div class="line">[root@bogon project]# git status #查看状态</div><div class="line"></div><div class="line"># 位于分支 master</div><div class="line"></div><div class="line"># 您有尚未合并的路径。</div><div class="line"></div><div class="line"># （解决冲突并运行 &quot;git commit&quot;）</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># 未合并的路径：</div><div class="line"></div><div class="line"># （使用 &quot;git add &lt;file&gt;...&quot; 标记解决方案）</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># 双方修改： file3</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line">修改尚未加入提交（使用 &quot;git add&quot; 和/或 &quot;git commit -a&quot;）</div><div class="line"></div><div class="line">[root@bogon project]# git add file3 # 将文件加入缓存</div><div class="line"></div><div class="line">[root@bogon project]# git status # 再次查看状态</div><div class="line"></div><div class="line"># 位于分支 master</div><div class="line"></div><div class="line"># 所有冲突已解决但您仍处于合并中。</div><div class="line"></div><div class="line"># （使用 &quot;git commit&quot; 结束合并）</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># 要提交的变更：</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line"># 修改： file3</div><div class="line"></div><div class="line">#</div><div class="line"></div><div class="line">[root@bogon project]# git commit -m &apos;merge file3&apos; # 提交修改的文件</div><div class="line"></div><div class="line">[master 6b63f36] merge file3</div></pre></td></tr></table></figure>
+<ul>
+<li>当我们完成合并后，不再需要experimental时，可以使用下面的命令删除：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git branch -d experimental</div><div class="line">已删除分支 experimental（曾为 e511488）。</div></pre></td></tr></table></figure>
+<p>git branch -d只能删除那些已经被当前分支的合并的分支. 如果你要强制删除某个分支的话就用git branch –D</p>
+<h2 id="撤销一个合并"><a href="#撤销一个合并" class="headerlink" title="撤销一个合并"></a>撤销一个合并</h2><ul>
+<li>如果你觉得你合并后的状态是一团乱麻，想把当前的修改都放弃，你可以用下面的命令回到合并之前的状态：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@bogon project]# git reset --hard HEAD^</div><div class="line">HEAD 现在位于 2922456 update file3 on master</div><div class="line">[root@bogon project]# cat file3</div><div class="line">test</div><div class="line">master:update file3</div></pre></td></tr></table></figure>
+<h2 id="推送至远程仓库"><a href="#推送至远程仓库" class="headerlink" title="推送至远程仓库"></a>推送至远程仓库</h2><ul>
+<li>在本机完成改动后就可以提交到远程仓库了</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin master</div></pre></td></tr></table></figure>
+<p>可以把 master 换成你想要推送的任何分支。 </p>
+<ul>
+<li>如果你还没有克隆现有仓库，并欲将你的仓库连接到某个远程服务器，你可以使用如下命令添加：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add origin &lt;server&gt;</div></pre></td></tr></table></figure>
+<p>如此你就能够将你的改动推送到所添加的服务器上去了。</p>
+<h2 id="更新与合并"><a href="#更新与合并" class="headerlink" title="更新与合并"></a>更新与合并</h2><ul>
+<li>要更新你的本地仓库至最新改动，执行：</li>
+</ul>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git pull</span></div></pre></td></tr></table></figure>
+<p>以在你的工作目录中 获取（fetch） 并 合并（merge） 远端的改动。</p>
+<ul>
+<li>要合并其他分支到你的当前分支（例如 master），执行：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge &lt;branch&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>在这两种情况下，git 都会尝试去自动合并改动。遗憾的是，这可能并非每次都成功，并可能出现冲突（conflicts）。 这时候就需要你修改这些文件来手动合并这些冲突（conflicts）。改完之后，你需要执行如下命令以将它们标记为合并成功：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add &lt;filename&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>在合并改动之前，你可以使用如下命令预览差异：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git diff &lt;source_branch&gt; &lt;target_branch&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>参考：<a href="https://git-scm.com/book/zh/v2" target="_blank" rel="external">Git Pro</a>、<a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html" target="_blank" rel="external">阮一峰的网络日志</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;初始化git&quot;&gt;&lt;a href=&quot;#初始化git&quot; class=&quot;headerlink&quot; title=&quot;初始化git&quot;&gt;&lt;/a&gt;初始化git&lt;/h1&gt;&lt;h2 id=&quot;配置git&quot;&gt;&lt;a href=&quot;#配置git&quot; class=&quot;headerlink&quot; title=
+    
+    </summary>
+    
+      <category term="工具配置" scheme="http://xiangcl.com/categories/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="GitHub" scheme="http://xiangcl.com/tags/GitHub/"/>
+    
+      <category term="Git" scheme="http://xiangcl.com/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>关于登录Linux出现 bash4.2$ 的问题</title>
@@ -167,155 +438,48 @@ Please make your choice from above [&apos;q&apos; to quit | &apos;c&apos; to con
   </entry>
   
   <entry>
-    <title>图解OS及Linux的基础知识</title>
-    <link href="http://xiangcl.com/linux/chart-linux-os.html"/>
-    <id>http://xiangcl.com/linux/chart-linux-os.html</id>
+    <title>如何把图片放在一个元素的上下居中？</title>
+    <link href="http://xiangcl.com/web-front-end/image-elements-center.html"/>
+    <id>http://xiangcl.com/web-front-end/image-elements-center.html</id>
     <published>2017-05-18T09:02:42.514Z</published>
     <updated>2017-05-18T09:02:42.514Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p>试着尽量用图示来表示个人对内容的理解，不足之处，还望不吝指教。</p>
-<h3 id="一-CPU"><a href="#一-CPU" class="headerlink" title="一.CPU"></a>一.CPU</h3></blockquote>
-<p><strong>1.cpu与指令集</strong></p>
-<ul>
-<li><strong>CPU</strong>分为运算器和控制器</li>
-<li><p><strong>CPU指令</strong></p>
-<ul>
-<li>特权指令<ul>
-<li>拥有管理权限，（一般情况下，只有OS才有权限运行特权指令）</li>
-</ul>
-</li>
-<li>普通指令<ul>
-<li>拥有普通功能，一般应用程序运行</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>不同的运算由不同的运算器完成运算（由指令集提供运算）</p>
-</li>
-<li><strong>程序员</strong>：一般面向操作系统编程</li>
-<li><strong>图示说明：</strong></li>
-</ul>
-<p><img src="https://leanote.com/api/file/getImage?fileId=57123c98ab644141d3000341" alt="图片标题"></p>
-<p><strong>2.人与机器</strong></p>
-<blockquote>
-<p>感觉没什么好解释的，一切尽在图中</p>
-</blockquote>
-<ul>
-<li><strong>图示说明</strong></li>
-</ul>
-<p><img src="https://leanote.com/api/file/getImage?fileId=57123cacab644141d3000342" alt="图片标题"></p>
-<blockquote>
-<h3 id="二-OS"><a href="#二-OS" class="headerlink" title="二.OS"></a>二.OS</h3></blockquote>
-<p><strong>1.OS的目的与功能</strong></p>
-<ul>
-<li><strong>OS</strong>：Operating System</li>
-<li><strong>System Call</strong><ul>
-<li>简称为：Syscall （系统调用）</li>
-</ul>
-</li>
-<li><strong>OS</strong>的通用目的与功能：</li>
-<li><strong>图示说明：</strong></li>
-</ul>
-<p><img src="https://leanote.com/api/file/getImage?fileId=57123cb9ab644141d3000343" alt="图片标题"></p>
-<p><strong>2.编程的层次</strong></p>
-<ul>
-<li><strong>硬件规格</strong>：hardware specifiacation<ul>
-<li>不同厂商的硬件规格千差万别，API也各不相同，写起来极为不便；</li>
-</ul>
-</li>
-<li><strong>系统调用</strong>：数量很少，但是很精巧；</li>
-<li><p><strong>库调用</strong>：library call</p>
-<ul>
-<li>把底层的功能整合出来，提供成离最终目标更近的功能；对所有的计算机功能来说，所有的功能都是通过调用实现；（通常都是c，c++库）</li>
-</ul>
-</li>
-<li><p><strong>图示说明：</strong></p>
-</li>
-</ul>
-<p><img src="https://leanote.com/api/file/getImage?fileId=57123cccab64414339000393" alt="图片标题"></p>
-<p><strong>3.指令环</strong></p>
-<ul>
-<li>由内到外依次是<strong>环0、环1、环2、环3</strong>；</li>
-<li><strong>环0</strong>是特权指令，一般只有操作系统有权限运行；</li>
-<li><strong>环1、环2</strong>出于历史原因，没有使用；</li>
-<li><p><strong>环3</strong>是普通指令，一般应用程序使用；</p>
-<ul>
-<li><strong>特殊情况</strong>：例如：<code>mkdir /home/test</code></li>
-<li><strong>Note</strong>：没办法直接完成，需要向内核申请权限；</li>
-</ul>
-</li>
-<li><p><strong>图示说明：</strong></p>
-</li>
-</ul>
-<p><img src="https://leanote.com/api/file/getImage?fileId=57123cdcab644141d3000344" alt="图片标题"></p>
-<p><strong>4.程序的运行模式</strong></p>
-<ul>
-<li><strong>用户空间</strong>：user space（us）</li>
-<li><p><strong>内核空间</strong>：system space</p>
-</li>
-<li><p><strong>图示说明：</strong></p>
-</li>
-</ul>
-<p><img src="https://leanote.com/api/file/getImage?fileId=57123ce9ab644141d3000345" alt="图片标题"></p>
-<blockquote>
-<h3 id="三-UI：User-Interface"><a href="#三-UI：User-Interface" class="headerlink" title="三.UI：User Interface"></a>三.UI：User Interface</h3></blockquote>
-<p><code>对OS来说：UI是用户接口、对用户来说UI是前端；</code></p>
-<ul>
-<li><strong>GUI</strong>：Graphic User Interface （图形用户接口）</li>
-<li><p><strong>CLI</strong>：Command Line Interface （命令行接口）</p>
-</li>
-<li><p><strong>图示说明：</strong></p>
-</li>
-</ul>
-<p><img src="https://leanote.com/api/file/getImage?fileId=57123d10ab644141d3000347" alt="图片标题"></p>
-<blockquote>
-<h3 id="四-ABI与API"><a href="#四-ABI与API" class="headerlink" title="四.ABI与API"></a>四.ABI与API</h3></blockquote>
-<ul>
-<li><p><strong>ABI</strong>：Application Binary Interface（应用程序二进制接口）</p>
-<ul>
-<li>描述了应用程序（或者其他类型）和操作系统之间或其他应用程序的低级接口。</li>
-</ul>
-</li>
-<li><p><strong>API</strong>: Application Programming Interface（应用程序编程接口）</p>
-<ul>
-<li>是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节</li>
-</ul>
-</li>
-<li><p><strong>图示说明：</strong></p>
-</li>
-</ul>
-<p><img src="https://leanote.com/api/file/getImage?fileId=57123d35ab644141d3000348" alt="图片标题"></p>
-<blockquote>
-<h3 id="五-主流的CPU架构"><a href="#五-主流的CPU架构" class="headerlink" title="五.主流的CPU架构"></a>五.主流的CPU架构</h3></blockquote>
-<ul>
-<li><strong>图示说明：</strong></li>
-</ul>
-<p><img src="https://leanote.com/api/file/getImage?fileId=57123d3fab64414339000396" alt="图片标题"></p>
-<blockquote>
-<h3 id="六-流行的OS分支"><a href="#六-流行的OS分支" class="headerlink" title="六.流行的OS分支"></a>六.流行的OS分支</h3></blockquote>
-<ul>
-<li><strong>图示说明：</strong></li>
-</ul>
-<p><img src="https://leanote.com/api/file/getImage?fileId=57123d4bab644141d300034c" alt="图片标题"></p>
-]]></content>
+    <content type="html"><![CDATA[<h2 id="如何把图片放在一个元素的上下居中？"><a href="#如何把图片放在一个元素的上下居中？" class="headerlink" title="如何把图片放在一个元素的上下居中？"></a>如何把图片放在一个元素的上下居中？</h2><h3 id="实现效果："><a href="#实现效果：" class="headerlink" title="实现效果："></a>实现效果：</h3><p><img src="http://i.imgur.com/TigwcKd.png" alt=""></p>
+<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;div放一个图片居中&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .div1{
+            width:250px;
+            height:250px;
+            border:1px solid red;
+            display:table-cell; /*此元素会作为一个表格单元格显示*/
+            vertical-align:middle; /*把此元素放置在父元素的中部。*/
+            text-align: center;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;div1&quot;&gt;
+        &lt;img src=&quot;ali.jpg&quot;&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;试着尽量用图示来表示个人对内容的理解，不足之处，还望不吝指教。&lt;/p&gt;
-&lt;h3 id=&quot;一-CPU&quot;&gt;&lt;a href=&quot;#一-CPU&quot; class=&quot;headerlink&quot; title=&quot;一.CPU&quot;&gt;&lt;/a&gt;一.CPU&lt;/h3&gt;&lt;/blockqu
+      &lt;h2 id=&quot;如何把图片放在一个元素的上下居中？&quot;&gt;&lt;a href=&quot;#如何把图片放在一个元素的上下居中？&quot; class=&quot;headerlink&quot; title=&quot;如何把图片放在一个元素的上下居中？&quot;&gt;&lt;/a&gt;如何把图片放在一个元素的上下居中？&lt;/h2&gt;&lt;h3 id=&quot;实现效果：
     
     </summary>
     
-      <category term="Linux" scheme="http://xiangcl.com/categories/Linux/"/>
+      <category term="Web前端" scheme="http://xiangcl.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Linux" scheme="http://xiangcl.com/tags/Linux/"/>
+      <category term="Web前端" scheme="http://xiangcl.com/tags/Web%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="OS" scheme="http://xiangcl.com/tags/OS/"/>
-    
-      <category term="图解" scheme="http://xiangcl.com/tags/%E5%9B%BE%E8%A7%A3/"/>
+      <category term="html+css" scheme="http://xiangcl.com/tags/html-css/"/>
     
   </entry>
   
@@ -527,9 +691,9 @@ $ git config --global user.email &quot;your_email@example.com&quot;
       <category term="工具配置" scheme="http://xiangcl.com/categories/%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="工具使用" scheme="http://xiangcl.com/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
-    
       <category term="Git" scheme="http://xiangcl.com/tags/Git/"/>
+    
+      <category term="工具使用" scheme="http://xiangcl.com/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
@@ -769,6 +933,159 @@ $ git config --global user.email &quot;your_email@example.com&quot;
   </entry>
   
   <entry>
+    <title>图解OS及Linux的基础知识</title>
+    <link href="http://xiangcl.com/linux/chart-linux-os.html"/>
+    <id>http://xiangcl.com/linux/chart-linux-os.html</id>
+    <published>2017-05-18T09:02:42.514Z</published>
+    <updated>2017-05-18T09:02:42.514Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>试着尽量用图示来表示个人对内容的理解，不足之处，还望不吝指教。</p>
+<h3 id="一-CPU"><a href="#一-CPU" class="headerlink" title="一.CPU"></a>一.CPU</h3></blockquote>
+<p><strong>1.cpu与指令集</strong></p>
+<ul>
+<li><strong>CPU</strong>分为运算器和控制器</li>
+<li><p><strong>CPU指令</strong></p>
+<ul>
+<li>特权指令<ul>
+<li>拥有管理权限，（一般情况下，只有OS才有权限运行特权指令）</li>
+</ul>
+</li>
+<li>普通指令<ul>
+<li>拥有普通功能，一般应用程序运行</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>不同的运算由不同的运算器完成运算（由指令集提供运算）</p>
+</li>
+<li><strong>程序员</strong>：一般面向操作系统编程</li>
+<li><strong>图示说明：</strong></li>
+</ul>
+<p><img src="https://leanote.com/api/file/getImage?fileId=57123c98ab644141d3000341" alt="图片标题"></p>
+<p><strong>2.人与机器</strong></p>
+<blockquote>
+<p>感觉没什么好解释的，一切尽在图中</p>
+</blockquote>
+<ul>
+<li><strong>图示说明</strong></li>
+</ul>
+<p><img src="https://leanote.com/api/file/getImage?fileId=57123cacab644141d3000342" alt="图片标题"></p>
+<blockquote>
+<h3 id="二-OS"><a href="#二-OS" class="headerlink" title="二.OS"></a>二.OS</h3></blockquote>
+<p><strong>1.OS的目的与功能</strong></p>
+<ul>
+<li><strong>OS</strong>：Operating System</li>
+<li><strong>System Call</strong><ul>
+<li>简称为：Syscall （系统调用）</li>
+</ul>
+</li>
+<li><strong>OS</strong>的通用目的与功能：</li>
+<li><strong>图示说明：</strong></li>
+</ul>
+<p><img src="https://leanote.com/api/file/getImage?fileId=57123cb9ab644141d3000343" alt="图片标题"></p>
+<p><strong>2.编程的层次</strong></p>
+<ul>
+<li><strong>硬件规格</strong>：hardware specifiacation<ul>
+<li>不同厂商的硬件规格千差万别，API也各不相同，写起来极为不便；</li>
+</ul>
+</li>
+<li><strong>系统调用</strong>：数量很少，但是很精巧；</li>
+<li><p><strong>库调用</strong>：library call</p>
+<ul>
+<li>把底层的功能整合出来，提供成离最终目标更近的功能；对所有的计算机功能来说，所有的功能都是通过调用实现；（通常都是c，c++库）</li>
+</ul>
+</li>
+<li><p><strong>图示说明：</strong></p>
+</li>
+</ul>
+<p><img src="https://leanote.com/api/file/getImage?fileId=57123cccab64414339000393" alt="图片标题"></p>
+<p><strong>3.指令环</strong></p>
+<ul>
+<li>由内到外依次是<strong>环0、环1、环2、环3</strong>；</li>
+<li><strong>环0</strong>是特权指令，一般只有操作系统有权限运行；</li>
+<li><strong>环1、环2</strong>出于历史原因，没有使用；</li>
+<li><p><strong>环3</strong>是普通指令，一般应用程序使用；</p>
+<ul>
+<li><strong>特殊情况</strong>：例如：<code>mkdir /home/test</code></li>
+<li><strong>Note</strong>：没办法直接完成，需要向内核申请权限；</li>
+</ul>
+</li>
+<li><p><strong>图示说明：</strong></p>
+</li>
+</ul>
+<p><img src="https://leanote.com/api/file/getImage?fileId=57123cdcab644141d3000344" alt="图片标题"></p>
+<p><strong>4.程序的运行模式</strong></p>
+<ul>
+<li><strong>用户空间</strong>：user space（us）</li>
+<li><p><strong>内核空间</strong>：system space</p>
+</li>
+<li><p><strong>图示说明：</strong></p>
+</li>
+</ul>
+<p><img src="https://leanote.com/api/file/getImage?fileId=57123ce9ab644141d3000345" alt="图片标题"></p>
+<blockquote>
+<h3 id="三-UI：User-Interface"><a href="#三-UI：User-Interface" class="headerlink" title="三.UI：User Interface"></a>三.UI：User Interface</h3></blockquote>
+<p><code>对OS来说：UI是用户接口、对用户来说UI是前端；</code></p>
+<ul>
+<li><strong>GUI</strong>：Graphic User Interface （图形用户接口）</li>
+<li><p><strong>CLI</strong>：Command Line Interface （命令行接口）</p>
+</li>
+<li><p><strong>图示说明：</strong></p>
+</li>
+</ul>
+<p><img src="https://leanote.com/api/file/getImage?fileId=57123d10ab644141d3000347" alt="图片标题"></p>
+<blockquote>
+<h3 id="四-ABI与API"><a href="#四-ABI与API" class="headerlink" title="四.ABI与API"></a>四.ABI与API</h3></blockquote>
+<ul>
+<li><p><strong>ABI</strong>：Application Binary Interface（应用程序二进制接口）</p>
+<ul>
+<li>描述了应用程序（或者其他类型）和操作系统之间或其他应用程序的低级接口。</li>
+</ul>
+</li>
+<li><p><strong>API</strong>: Application Programming Interface（应用程序编程接口）</p>
+<ul>
+<li>是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节</li>
+</ul>
+</li>
+<li><p><strong>图示说明：</strong></p>
+</li>
+</ul>
+<p><img src="https://leanote.com/api/file/getImage?fileId=57123d35ab644141d3000348" alt="图片标题"></p>
+<blockquote>
+<h3 id="五-主流的CPU架构"><a href="#五-主流的CPU架构" class="headerlink" title="五.主流的CPU架构"></a>五.主流的CPU架构</h3></blockquote>
+<ul>
+<li><strong>图示说明：</strong></li>
+</ul>
+<p><img src="https://leanote.com/api/file/getImage?fileId=57123d3fab64414339000396" alt="图片标题"></p>
+<blockquote>
+<h3 id="六-流行的OS分支"><a href="#六-流行的OS分支" class="headerlink" title="六.流行的OS分支"></a>六.流行的OS分支</h3></blockquote>
+<ul>
+<li><strong>图示说明：</strong></li>
+</ul>
+<p><img src="https://leanote.com/api/file/getImage?fileId=57123d4bab644141d300034c" alt="图片标题"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;试着尽量用图示来表示个人对内容的理解，不足之处，还望不吝指教。&lt;/p&gt;
+&lt;h3 id=&quot;一-CPU&quot;&gt;&lt;a href=&quot;#一-CPU&quot; class=&quot;headerlink&quot; title=&quot;一.CPU&quot;&gt;&lt;/a&gt;一.CPU&lt;/h3&gt;&lt;/blockqu
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://xiangcl.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://xiangcl.com/tags/Linux/"/>
+    
+      <category term="OS" scheme="http://xiangcl.com/tags/OS/"/>
+    
+      <category term="图解" scheme="http://xiangcl.com/tags/%E5%9B%BE%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux文件与目录管理1</title>
     <link href="http://xiangcl.com/Linux/linux-file-dir-man-one.html"/>
     <id>http://xiangcl.com/Linux/linux-file-dir-man-one.html</id>
@@ -875,52 +1192,6 @@ $ git config --global user.email &quot;your_email@example.com&quot;
       <category term="Linux" scheme="http://xiangcl.com/tags/Linux/"/>
     
       <category term="Linux基础" scheme="http://xiangcl.com/tags/Linux%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何把图片放在一个元素的上下居中？</title>
-    <link href="http://xiangcl.com/web-front-end/image-elements-center.html"/>
-    <id>http://xiangcl.com/web-front-end/image-elements-center.html</id>
-    <published>2017-05-18T09:02:42.514Z</published>
-    <updated>2017-05-18T09:02:42.514Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="如何把图片放在一个元素的上下居中？"><a href="#如何把图片放在一个元素的上下居中？" class="headerlink" title="如何把图片放在一个元素的上下居中？"></a>如何把图片放在一个元素的上下居中？</h2><h3 id="实现效果："><a href="#实现效果：" class="headerlink" title="实现效果："></a>实现效果：</h3><p><img src="http://i.imgur.com/TigwcKd.png" alt=""></p>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;div放一个图片居中&lt;/title&gt;
-    &lt;style type=&quot;text/css&quot;&gt;
-        .div1{
-            width:250px;
-            height:250px;
-            border:1px solid red;
-            display:table-cell; /*此元素会作为一个表格单元格显示*/
-            vertical-align:middle; /*把此元素放置在父元素的中部。*/
-            text-align: center;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class=&quot;div1&quot;&gt;
-        &lt;img src=&quot;ali.jpg&quot;&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;如何把图片放在一个元素的上下居中？&quot;&gt;&lt;a href=&quot;#如何把图片放在一个元素的上下居中？&quot; class=&quot;headerlink&quot; title=&quot;如何把图片放在一个元素的上下居中？&quot;&gt;&lt;/a&gt;如何把图片放在一个元素的上下居中？&lt;/h2&gt;&lt;h3 id=&quot;实现效果：
-    
-    </summary>
-    
-      <category term="Web前端" scheme="http://xiangcl.com/categories/Web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Web前端" scheme="http://xiangcl.com/tags/Web%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="html+css" scheme="http://xiangcl.com/tags/html-css/"/>
     
   </entry>
   
@@ -1881,62 +2152,6 @@ $ yum info php70u-common        #查看`php70u-common`包的详细信息
       <category term="yum" scheme="http://xiangcl.com/tags/yum/"/>
     
       <category term="CentOS" scheme="http://xiangcl.com/tags/CentOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux数据库备份</title>
-    <link href="http://xiangcl.com/linux/linux-database-backup.html"/>
-    <id>http://xiangcl.com/linux/linux-database-backup.html</id>
-    <published>2017-05-18T09:02:42.510Z</published>
-    <updated>2017-05-18T09:02:42.510Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="目标-每隔1分钟-导出-sql-压缩-并按日期存储在-data-下-每分钟后删除-sql文件-每隔2分钟删除-tar-gz文件"><a href="#目标-每隔1分钟-导出-sql-压缩-并按日期存储在-data-下-每分钟后删除-sql文件-每隔2分钟删除-tar-gz文件" class="headerlink" title="目标: 每隔1分钟,导出.sql,压缩,并按日期存储在/data 下,每分钟后删除.sql文件,每隔2分钟删除.tar.gz文件"></a>目标: 每隔1分钟,导出.sql,压缩,并按日期存储在/data 下,每分钟后删除.sql文件,每隔2分钟删除.tar.gz文件</h2><h2 id="知识-定时任务-crontab-mysqldump-导出-tar-打包压缩-按日期创建文件-date"><a href="#知识-定时任务-crontab-mysqldump-导出-tar-打包压缩-按日期创建文件-date" class="headerlink" title="知识: 定时任务 crontab , mysqldump 导出 , tar 打包压缩, 按日期创建文件 date"></a>知识: 定时任务 crontab , mysqldump 导出 , tar 打包压缩, 按日期创建文件 date</h2><h2 id="准备部分"><a href="#准备部分" class="headerlink" title="准备部分"></a>准备部分</h2><p>1.建立mysqldump软链接(<font color="red">必须在~目录下建立软链接</font>)</p>
-<pre><code>ln -s /usr/local/mysql/bin/mysqldump /usr/bin/mysqldump
-</code></pre><p>2.将mysql.bak.sql导出备份到~目录下</p>
-<pre><code>mysqldump -uroot -p123 -B mysql &gt; ./mysql.bak.sql
-</code></pre><p>3.将导出的mysql.bak.sql打包成.tar.gz</p>
-<pre><code>tar zcvf mysql.bak.sql.tar.gz mysql.bak.sql
-</code></pre><h2 id="正式写shell脚本"><a href="#正式写shell脚本" class="headerlink" title="正式写shell脚本"></a>正式写shell脚本</h2><p>1.新建bak.sh脚本文件</p>
-<pre><code>vim bak.sh
-</code></pre><p>往脚本里写的内容:</p>
-<pre><code>#!/bin/bash
-cd /data
-rm -f *.sql
-
-old=`date -d &apos;-2 minute&apos; +%Y%m%d%H%M`
-tad=`date +%Y%m%d%H%M`
-
-/usr/local/mysql/bin/mysqldump -uroot -p123 -B mysql &gt; ./$tad.sql
-
-tar zcf $tad.sql.tar.gz $tad.sql
-
-# -f是判断文件是否存在
-
-if [ -f /data/$old.sql.tar.gz ]
-then
-rm -rf /data/$old.sql.tar.gz
-fi
-</code></pre><p>2.在/目录下创建一个data目录</p>
-<pre><code>mkdir -p /data/
-</code></pre><p>3.创建定时任务:</p>
-<pre><code>crontab -e
-</code></pre><p>4:编辑定时任务:</p>
-<pre><code>*/1  *  *  *  *   /data/bak.sh
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;目标-每隔1分钟-导出-sql-压缩-并按日期存储在-data-下-每分钟后删除-sql文件-每隔2分钟删除-tar-gz文件&quot;&gt;&lt;a href=&quot;#目标-每隔1分钟-导出-sql-压缩-并按日期存储在-data-下-每分钟后删除-sql文件-每隔2分钟删除-ta
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://xiangcl.com/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://xiangcl.com/tags/Linux/"/>
-    
-      <category term="数据库备份" scheme="http://xiangcl.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD/"/>
     
   </entry>
   

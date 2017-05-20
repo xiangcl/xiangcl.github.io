@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://xiangcl.com/linux-collection/linux-problem-fives.html</loc>
+    
+    <lastmod>2017-05-20T09:16:08.427Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://xiangcl.com/tool-config/GitHub_Uses.html</loc>
+    
+    <lastmod>2017-05-20T09:16:08.427Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xiangcl.com/linux-collection/linux-problem-four.html</loc>
     
     <lastmod>2017-05-20T08:54:57.598Z</lastmod>
@@ -37,7 +51,7 @@
   </url>
   
   <url>
-    <loc>http://xiangcl.com/web-front-end/html-css-location.html</loc>
+    <loc>http://xiangcl.com/seo/simple-seo-optimization.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     
@@ -72,14 +86,14 @@
   </url>
   
   <url>
-    <loc>http://xiangcl.com/web-front-end/image-elements-center.html</loc>
+    <loc>http://xiangcl.com/commonweal/index.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xiangcl.com/commonweal/index.html</loc>
+    <loc>http://xiangcl.com/web-front-end/html-css-location.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     
@@ -107,6 +121,13 @@
   </url>
   
   <url>
+    <loc>http://xiangcl.com/categories/index.html</loc>
+    
+    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://xiangcl.com/Linux/linux-file-dir-man-one.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
@@ -121,13 +142,6 @@
   </url>
   
   <url>
-    <loc>http://xiangcl.com/tool-config/yum-centos-package-tool.html</loc>
-    
-    <lastmod>2017-05-18T09:02:42.514Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://xiangcl.com/linux/linux-user-groups.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
@@ -135,14 +149,14 @@
   </url>
   
   <url>
-    <loc>http://xiangcl.com/seo/simple-seo-optimization.html</loc>
+    <loc>http://xiangcl.com/tool-config/yum-centos-package-tool.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://xiangcl.com/categories/index.html</loc>
+    <loc>http://xiangcl.com/web-front-end/image-elements-center.html</loc>
     
     <lastmod>2017-05-18T09:02:42.514Z</lastmod>
     
